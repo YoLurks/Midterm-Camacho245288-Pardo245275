@@ -5,6 +5,7 @@ public class Background implements DrawingObject {
     private double y;
     private double w;
     private double h;
+    
     public Background(double x, double y, double w, double h){
         this.x = x;
         this.y = y;
