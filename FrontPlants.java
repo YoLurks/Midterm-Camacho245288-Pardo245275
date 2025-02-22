@@ -1,15 +1,13 @@
 import java.awt.*;
 import java.util.ArrayList;
-public class Plants implements DrawingObject {
+public class FrontPlants implements DrawingObject {
     private ArrayList<DrawingObject> elements;
-    public Plants(){
+    public FrontPlants(){
         elements = new ArrayList<>();
-        elements.add(new Circle(385,329.1,16.2,48.4,new Color(255,222,89), -3.2));
-        elements.add(new Circle(411.5,344,10.6,31.6,new Color(255,222,89), -1.3));
-        elements.add(new Circle(437.2,339.5,10.6,31.6,new Color(255,222,89), 11.7));
-        elements.add(new Circle(444.4,347.8,16.2,48.4,new Color(255,222,89), -3.2));
-        elements.add(new Circle(470.9,362.8,10.6,31.6,new Color(255,222,89), -1.3));
-        elements.add(new Circle(489.7,366.4,10.6,31.6,new Color(255,222,89), 0.9));
+        elements.add(new Line(72.6,477.3,107.2,775.6,new Color(107,173,78), 1));
+        elements.add(new Line(108.4,484.8,108.4,785,new Color(107,173,78), 1));
+        elements.add(new Line(140.5,468.6,73.8,761.3,new Color(107,173,78), 1));
+
         elements.add(new Circle(58.3,425.7,24.6,73.4,new Color(255,222,89), -3.2));
         elements.add(new Circle(98.5,448.3,16.1,47.9,new Color(255,222,89), -1.3));
         elements.add(new Circle(137.5,441.5,16.1,47.9,new Color(255,222,89), 11.7));
