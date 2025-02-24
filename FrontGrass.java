@@ -12,13 +12,15 @@ public class FrontGrass implements DrawingObject {
         elements.add(new Triangle(405.5,496.5,64.4,56.3,new Color(126,217,87), 0));
         elements.add(new Triangle(582.8,536.3,64.4,56.3,new Color(126,217,87), 0));
         elements.add(new Triangle(719.8,553.5,64.4,56.3,new Color(126,217,87), 0));
-
-
-
-
-
-
         elements.add(new Circle(295.3,553.5,659.4,282.5,new Color(126,217,87),0));
+        
+        elements.add(new Triangle(84.3,497.2,64.4,56.3,new Color(123,204,88),0));
+        elements.add(new Triangle(135,491.7,64.4,56.3,new Color(123,204,88),0));
+        elements.add(new Triangle(188.9,491.7,64.4,56.3,new Color(123,204,88),0));
+        elements.add(new Triangle(213.5,505.4,64.4,56.3,new Color(123,204,88),0));
+        elements.add(new Triangle(262.8,505.4,64.4,56.3,new Color(123,204,88),0));
+        elements.add(new Triangle(318.2,511.2,64.4,56.3,new Color(123,204,88),0));
+        elements.add(new Triangle(390.1,542.2,64.4,56.3,new Color(123,204,88),0));
         elements.add(new Circle(-167.9,510.3,659.4,282.5,new Color(123,204,88),0));
 
 
