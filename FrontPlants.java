@@ -12,15 +12,6 @@ public class FrontPlants implements DrawingObject {
         elements.add(new Circle(98.5,448.3,16.1,47.9,new Color(255,222,89), -1.3));
         elements.add(new Circle(137.5,441.5,16.1,47.9,new Color(255,222,89), 11.7));
 
-
-
-
-
-
-
-
-
-        
     }
 
     @Override

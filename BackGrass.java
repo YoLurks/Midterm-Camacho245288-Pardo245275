@@ -17,21 +17,6 @@ public class BackGrass implements DrawingObject {
         elements.add(new Triangle(536.1,440.2,64.4,56.3,new Color(126,217,87), 0));
         elements.add(new Triangle(633.4,449,64.4,56.3,new Color(126,217,87), 0));
         elements.add(new Triangle(703,440.2,64.4,56.3,new Color(126,217,87), 0));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
     }
 
     @Override

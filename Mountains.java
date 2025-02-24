@@ -9,8 +9,7 @@ public class Mountains implements DrawingObject {
         elements.add(new Triangle(190.5,215.4,287.1,251.2,new Color(67,127,82), 0));
         elements.add(new Triangle(284.6,238.6,287.1,251.2,new Color(67,127,82), 0));
         elements.add(new Triangle(478.2,270.6,287.1,251.2,new Color(67,127,82), 0));
-        elements.add(new Triangle(603.1,285.1,287.1,251.2,new Color(67,127,82), 0));
-        
+        elements.add(new Triangle(603.1,285.1,287.1,251.2,new Color(67,127,82), 0));  
     }
 
     @Override

@@ -21,10 +21,7 @@ public class FrontGrass implements DrawingObject {
         elements.add(new Triangle(262.8,505.4,64.4,56.3,new Color(123,204,88),0));
         elements.add(new Triangle(318.2,511.2,64.4,56.3,new Color(123,204,88),0));
         elements.add(new Triangle(390.1,542.2,64.4,56.3,new Color(123,204,88),0));
-        elements.add(new Circle(-167.9,510.3,659.4,282.5,new Color(123,204,88),0));
-
-
-        
+        elements.add(new Circle(-167.9,510.3,659.4,282.5,new Color(123,204,88),0));  
     }
 
     @Override
