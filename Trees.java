@@ -27,26 +27,7 @@ public class Trees implements DrawingObject {
         elements.add(new Triangle(779.9,118.2,21.5,21.5,new Color(100,90,70), 35.9));
         elements.add(new Triangle(779.9,163.3,21.5,21.5,new Color(100,90,70), 35.9));
         elements.add(new Triangle(-131.8,394.4,203.3,177.9,new Color(100,90,70), -11.4));
-        elements.add(new Triangle(536.1,440.2,64.4,56.3,new Color(100,90,70), 0));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        
+        elements.add(new Triangle(536.1,440.2,64.4,56.3,new Color(100,90,70), 0));     
     }
 
     @Override

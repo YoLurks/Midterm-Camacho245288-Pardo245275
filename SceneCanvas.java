@@ -13,6 +13,7 @@ public class SceneCanvas extends JComponent {
         objects.add(new Trees());
         objects.add(new Vines());
         objects.add(new BackPlants());
+        objects.add(new Shed());
         objects.add(new BackGrass());
         objects.add(new Roadway());
         objects.add(new FrontGrass());
