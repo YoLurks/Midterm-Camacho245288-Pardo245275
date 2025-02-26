@@ -8,6 +8,11 @@ public class FrontPlants implements DrawingObject {
         elements.add(new Line(108.4,484.8,108.4,785,new Color(107,173,78), 1));
         elements.add(new Line(140.5,468.6,73.8,761.3,new Color(107,173,78), 1));
 
+        elements.add(new Circle(57.4,429.8,24.6,73.4,new Color(240,208,80), -3.2));
+        elements.add(new Circle(96.7,454.4,16.5,44.6,new Color(240,208,80), -3.2));
+        elements.add(new Circle(135.1,447.1,16.5,44.6,new Color(240,208,80), 13.5));
+
+
         elements.add(new Circle(58.3,425.7,24.6,73.4,new Color(255,222,89), -3.2));
         elements.add(new Circle(98.5,448.3,16.1,47.9,new Color(255,222,89), -1.3));
         elements.add(new Circle(137.5,441.5,16.1,47.9,new Color(255,222,89), 11.7));

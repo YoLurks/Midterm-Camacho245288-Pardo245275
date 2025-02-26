@@ -77,6 +77,19 @@ public class SecShed implements DrawingObject {
 
         //shed outer door
         elements.add(new Square(286.5, 228, 64.2, 235.7, new Color(155, 140, 110), 0));
+        elements.add(new Line(304.8,227.5,305.6,250.4,new Color(70,79,66), 3));
+        elements.add(new Line(305.3,353.3,305.3,462.8,new Color(70,79,66), 3));
+        elements.add(new Line(325.6,391.8,325.6,462.3,new Color(70,79,66), 1));
+        elements.add(new Circle(303.1,237.7,5,7,new Color(70,79,66),0));
+        elements.add(new Circle(303.4,431.4,3.6,7,new Color(70,79,66),0));
+        elements.add(new Circle(324.2,408.5,3.6,7,new Color(70,79,66),0));
+        elements.add(new Circle(302.1,280.7,38.5,38.5,new Color(70,79,66),0));
+        elements.add(new Circle(296.6,282.7,34.5,34.5,new Color(155,140,110),0));
+        elements.add(new Triangle(350.4, 242.1, 13.7, 15.4, new Color(70,79,66), -180));
+        elements.add(new Triangle(339.8, 254.6, 13.7, 28.2, new Color(70,79,66), -180));
+        // elements.add(new Triangle(311.1, 435, 32.2, 28.2, new Color(126,217,87), 0));
+        // elements.add(new Triangle(337.4, 448, 17.4, 15.2, new Color(126,217,87), 0));
+        // elements.add(new Triangle(303.1, 441.4, 17.7, 22.2, new Color(126,217,87), 0));
     }
 
      @Override
