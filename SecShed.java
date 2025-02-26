@@ -20,12 +20,14 @@ public class SecShed implements DrawingObject {
         elements.add(new Triangle(204.4,209.7,32.2,28.2,new Color(70,79,66), 0));
         elements.add(new Triangle(229.6,205.2,32.2,28.2,new Color(70,79,66), 0));
         elements.add(new Triangle(261.2,219.4,12.8,11.2,new Color(70,79,66), 0));
+        
 
         // shed body
         elements.add(new Square(126.7,249,180,253,new Color(70,79,66), 0));
         elements.add(new Triangle(199.6,267.8,32.2,28.2,new Color(70,79,66), 171.7));
         elements.add(new Triangle(219.3,264.1,32.2,28.2,new Color(70,79,66), 171.7));
         elements.add(new Triangle(270.8,258.4,32.2,28.2,new Color(70,79,66), 171.7));
+        
 
         elements.add(new Line(232.9,233.4,233.5,256.2,new Color(70,79,66), 3));
         elements.add(new Line(265.4,232.3,266,255.2,new Color(70,79,66), 3));
@@ -37,10 +39,12 @@ public class SecShed implements DrawingObject {
         elements.add(new Line(182.6,270.1,188.2,478.8,new Color(70,79,66), 2));
         elements.add(new Line(164.9,395.2,164.9,470.7,new Color(70,79,66), 3));
         elements.add(new Circle(185,403.9,3.9,7.4,new Color(70,79,66),0));
+        
 
         elements.add(new Triangle(207.4,442.3,77.7,68,new Color(70,79,66), -12.4));
         elements.add(new Triangle(185.1,441.5,49.2,49.1,new Color(70,79,66), 1.4));
         elements.add(new Triangle(249.7,449.7,32.2,28.2,new Color(70,79,66), -12.4));
+        elements.add(new Circle(131.1,271,180,279.3,new Color(58,67,54),0));
 
        
 
@@ -49,6 +53,7 @@ public class SecShed implements DrawingObject {
         elements.add(new Square(111.8,212.9,37.5,304.5,new Color(167,151,119), 0));
         elements.add(new Square(255.6,206.7,13.3,56,new Color(167,151,119), -56.2));
         elements.add(new Square(256.1,188.5,13.3,18.3,new Color(167,151,119), 0));
+        
 
         //shed support rope
         elements.add(new Square(255.2, 206.9, 19.1, 3.1, new Color(192, 179, 153), -28.9));
@@ -65,7 +70,7 @@ public class SecShed implements DrawingObject {
         elements.add(new Square(110.5, 270.6, 40, 3.1, new Color(192, 179, 153), 0));
         elements.add(new Square(110.5, 385.3, 40, 3.1, new Color(192, 179, 153), 0));
         elements.add(new Square(110.5, 390.3, 40, 3.1, new Color(192, 179, 153), 0));
-
+        
         //shed roof
         elements.add(new Square(61.3, 214.1, 296.1, 14.8, new Color(136, 124, 100), -9.3));
         elements.add(new Square(61.3, 213.7, 50.9, 15.2, new Color(109, 102, 90), -9.3));
@@ -74,6 +79,7 @@ public class SecShed implements DrawingObject {
         elements.add(new Triangle(133.4, 215.3, 18.4, 16.1, new Color(126, 217, 87), 170.6));
         elements.add(new Triangle(357.2, 186.8, 26.2, 23.2, new Color(126, 217, 87), 165.1));
         elements.add(new Triangle(336.8, 189.3, 26.6, 23.2, new Color(126, 217, 87), 170.6));
+        
 
         //shed outer door
         elements.add(new Square(286.5, 228, 64.2, 235.7, new Color(155, 140, 110), 0));
@@ -85,8 +91,8 @@ public class SecShed implements DrawingObject {
         elements.add(new Circle(324.2,408.5,3.6,7,new Color(70,79,66),0));
         elements.add(new Circle(302.1,280.7,38.5,38.5,new Color(70,79,66),0));
         elements.add(new Circle(296.6,282.7,34.5,34.5,new Color(155,140,110),0));
-        elements.add(new Triangle(350.4, 242.1, 13.7, 15.4, new Color(70,79,66), -180));
-        elements.add(new Triangle(339.8, 254.6, 13.7, 28.2, new Color(70,79,66), -180));
+        elements.add(new Triangle(339.8, 254.6, 13.7, 28.2, new Color(67,127,82), -180));
+
         // elements.add(new Triangle(311.1, 435, 32.2, 28.2, new Color(126,217,87), 0));
         // elements.add(new Triangle(337.4, 448, 17.4, 15.2, new Color(126,217,87), 0));
         // elements.add(new Triangle(303.1, 441.4, 17.7, 22.2, new Color(126,217,87), 0));

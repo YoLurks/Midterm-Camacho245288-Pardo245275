@@ -17,6 +17,7 @@ public class SceneCanvas extends JComponent {
     private Mountains mountains;
     private Trees trees;
     private Vines vines;
+    private Sign sign;
 
     public SceneCanvas() {
         setPreferredSize(new Dimension(800, 600));
@@ -32,6 +33,7 @@ public class SceneCanvas extends JComponent {
         mountains = new Mountains();
         trees = new Trees();
         vines = new Vines();
+        sign = new Sign();
         
 
         objects.add(background);
@@ -41,6 +43,7 @@ public class SceneCanvas extends JComponent {
         objects.add(backPlants);
         objects.add(shed);
         objects.add(backGrass);
+        objects.add(sign);
         objects.add(roadway);
         objects.add(frontGrass);
         objects.add(frontPlants);
@@ -79,11 +82,13 @@ public class SceneCanvas extends JComponent {
             objects.remove(roadway);
             objects.remove(frontGrass);
             objects.remove(frontPlants);
+            objects.remove(sign);
             objects.add(secShed);
             objects.add(backGrass);
             objects.add(roadway);
             objects.add(frontGrass);
             objects.add(frontPlants);
+            objects.add(sign);
 
             shedClicked = false;
         }
