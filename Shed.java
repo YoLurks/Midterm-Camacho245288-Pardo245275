@@ -10,10 +10,10 @@ public class Shed implements DrawingObject {
     public Shed(){
 
         elements = new ArrayList<>();
-        x = 127.7;
+        x = 100.7;
         y = 249.4;
-        width = 180;
-        height = 243.2;
+        width = 300;
+        height = 300;
 
 
         //shed background
@@ -96,4 +96,6 @@ public class Shed implements DrawingObject {
         public boolean containsPoint(int mouseX, int mouseY) {
             return (mouseX >= x && mouseX <= x + width) && (mouseY >= y && mouseY <= y + height);
         }
+
+        
 }

@@ -3,17 +3,11 @@ import java.util.ArrayList;
 
 public class SecShed implements DrawingObject {
     private ArrayList<DrawingObject> elements;
-    private double x;
-    private double y;
-    private double width;
-    private double height;
+
     public SecShed(){
 
         elements = new ArrayList<>();
-        x = 127.7;
-        y = 249.4;
-        width = 180;
-        height = 243.2;
+
 
         elements.add(new Square(90.8,205.5,40.5,304.5,new Color(124,115,95), 0));
         elements.add(new Square(96.7,218.3,162.5,278.9,new Color(140,128,104), 0));
@@ -27,7 +21,7 @@ public class SecShed implements DrawingObject {
         elements.add(new Triangle(261.2,219.4,12.8,11.2,new Color(70,79,66), 0));
 
         // shed body
-
+        
         elements.add(new Triangle(199.6,267.8,32.2,28.2,new Color(70,79,66), 171.7));
         elements.add(new Triangle(219.3,264.1,32.2,28.2,new Color(70,79,66), 171.7));
         elements.add(new Triangle(270.8,258.4,32.2,28.2,new Color(70,79,66), 171.7));
@@ -89,7 +83,6 @@ public class SecShed implements DrawingObject {
             g2dC.dispose();
         }
         }
-        public boolean containsPoint(int mouseX, int mouseY) {
-            return (mouseX >= x && mouseX <= x + width) && (mouseY >= y && mouseY <= y + height);
-        }
+    
+        
 }
