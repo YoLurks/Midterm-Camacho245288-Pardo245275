@@ -13,6 +13,10 @@ public class SceneCanvas extends JComponent {
     private BackPlants backPlants;
     private Roadway roadway;
     private FrontPlants frontPlants;
+    private Background background;
+    private Mountains mountains;
+    private Trees trees;
+    private Vines vines;
 
     public SceneCanvas() {
         setPreferredSize(new Dimension(800, 600));
@@ -24,12 +28,17 @@ public class SceneCanvas extends JComponent {
         roadway = new Roadway();
         shed = new Shed();
         secShed = new SecShed();
-        objects.add(new Background(0, 0, 800, 600));
-        objects.add(new Mountains());
-        objects.add(new Trees());
-        objects.add(new Vines());
+        background = new Background();
+        mountains = new Mountains();
+        trees = new Trees();
+        vines = new Vines();
+        
+
+        objects.add(background);
+        objects.add(mountains);
+        objects.add(trees);
+        objects.add(vines);
         objects.add(backPlants);
-        objects.add(secShed);
         objects.add(shed);
         objects.add(backGrass);
         objects.add(roadway);
@@ -67,9 +76,14 @@ public class SceneCanvas extends JComponent {
         if (shedClicked){
             objects.remove(shed);
             objects.remove(backGrass);
-            objects.remove(frontGrass);
             objects.remove(roadway);
-
+            objects.remove(frontGrass);
+            objects.remove(frontPlants);
+            objects.add(secShed);
+            objects.add(backGrass);
+            objects.add(roadway);
+            objects.add(frontGrass);
+            objects.add(frontPlants);
 
             shedClicked = false;
         }

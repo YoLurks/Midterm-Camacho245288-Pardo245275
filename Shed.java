@@ -10,10 +10,10 @@ public class Shed implements DrawingObject {
     public Shed(){
 
         elements = new ArrayList<>();
-        x = 100.7;
-        y = 249.4;
-        width = 300;
-        height = 300;
+        x = 147;
+        y = 250;
+        width = 145;
+        height = 210;
 
 
         //shed background

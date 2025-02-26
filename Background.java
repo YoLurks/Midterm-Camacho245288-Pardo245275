@@ -6,11 +6,11 @@ public class Background implements DrawingObject {
     private double w;
     private double h;
     
-    public Background(double x, double y, double w, double h){
-        this.x = x;
-        this.y = y;
-        this.w = w;
-        this.h = h;
+    public Background(){
+        x = 0;
+        y = 0;
+        w = 800;
+        h = 600;
     }
 
     @Override
