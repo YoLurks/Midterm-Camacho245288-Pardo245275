@@ -30,7 +30,6 @@ public class Star implements DrawingObject {
 
         Polygon star = new Polygon(xPoints, yPoints, 10);
 
-        // Apply rotation
         AffineTransform transform = new AffineTransform();
         transform.rotate(Math.toRadians(rotation), x, y);
         Shape rotatedStar = transform.createTransformedShape(star);

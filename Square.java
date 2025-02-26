@@ -16,6 +16,14 @@ public class Square implements DrawingObject {
         this.color = color;
         this.rotation = rotation;
     }
+
+    public void rotate() {
+        rotation += 10;
+    }
+
+    public void moveRight(){
+        x += 5;
+    }
     @Override
     public void draw(Graphics2D g){
         Graphics2D g2d = (Graphics2D) g;

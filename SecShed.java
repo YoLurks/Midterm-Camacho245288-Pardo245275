@@ -1,13 +1,13 @@
 import java.awt.*;
 import java.util.ArrayList;
 
-public class Shed implements DrawingObject {
+public class SecShed implements DrawingObject {
     private ArrayList<DrawingObject> elements;
     private double x;
     private double y;
     private double width;
     private double height;
-    public Shed(){
+    public SecShed(){
 
         elements = new ArrayList<>();
         x = 127.7;
@@ -15,8 +15,6 @@ public class Shed implements DrawingObject {
         width = 180;
         height = 243.2;
 
-
-        //shed background
         elements.add(new Square(90.8,205.5,40.5,304.5,new Color(124,115,95), 0));
         elements.add(new Square(96.7,218.3,162.5,278.9,new Color(140,128,104), 0));
         elements.add(new Square(123.9,205.5,178.3,42.5,new Color(155,140,110), 0));
@@ -29,7 +27,7 @@ public class Shed implements DrawingObject {
         elements.add(new Triangle(261.2,219.4,12.8,11.2,new Color(70,79,66), 0));
 
         // shed body
-        elements.add(new Square(108.4,256.2,182.4,235.7,new Color(155,140,110), -7.8));
+
         elements.add(new Triangle(199.6,267.8,32.2,28.2,new Color(70,79,66), 171.7));
         elements.add(new Triangle(219.3,264.1,32.2,28.2,new Color(70,79,66), 171.7));
         elements.add(new Triangle(270.8,258.4,32.2,28.2,new Color(70,79,66), 171.7));
