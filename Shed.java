@@ -66,6 +66,8 @@ public class Shed implements DrawingObject {
         elements.add(new Square(289.6, 392.5, 29, 3.1, new Color(192, 179, 153), 0));
         elements.add(new Square(292.7, 394, 29, 3.1, new Color(192, 179, 153), 37));
         elements.add(new Square(291.8, 411.8, 29, 3.1, new Color(192, 179, 153), -38.8));
+        elements.add(new Square(288.8, 412, 29, 3.1, new Color(192, 179, 153), 0));
+        elements.add(new Square(289.3, 416.9, 29, 3.1, new Color(192, 179, 153), 0));
         elements.add(new Square(108.7, 218.3, 44.6, 3.1, new Color(192, 179, 153), 0));
         elements.add(new Square(108.4, 238.8, 44.6, 3.1, new Color(192, 179, 153), 0));
         elements.add(new Square(110.5, 270.6, 40, 3.1, new Color(192, 179, 153), 0));
