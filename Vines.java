@@ -1,7 +1,9 @@
 import java.awt.*;
 import java.util.ArrayList;
-public class Vines implements DrawingObject {
+public class Vines extends DrawingObject {
     private ArrayList<DrawingObject> elements;
+    private double y;
+    private double x;
     public Vines(){
         elements = new ArrayList<>();
         elements.add(new Line(305.9,232.3,958.6,186,new Color(123,175,101), 1));
@@ -35,5 +37,24 @@ public class Vines implements DrawingObject {
         g2dC.dispose();
     }
 }
+     @Override
+    public double getY() { 
+        return y;
+    }
+    
+    @Override
+    public void setY(double newY) { 
+        this.y = newY; 
+    }
+
+    @Override
+    public double getX(){
+        return x;
+    }
+
+    @Override
+    public void setX(double newX){
+        this.x = newX;
+    }
 
 }

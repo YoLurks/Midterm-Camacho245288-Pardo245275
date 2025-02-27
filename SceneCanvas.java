@@ -18,10 +18,17 @@ public class SceneCanvas extends JComponent {
     private Trees trees;
     private Vines vines;
     private Sign sign;
+    private Star star;
+    private SecBackground secBackground;
+    private Timer BGRemover;
+    private final int TARGET_MOVE_AMOUNT = 1000; 
+    private final int STEP = 5; 
+    private int movedAmount = 0; 
 
     public SceneCanvas() {
         setPreferredSize(new Dimension(800, 600));
         objects = new ArrayList<>();
+        secBackground = new SecBackground();
         backGrass = new BackGrass();
         frontGrass = new FrontGrass();
         backPlants = new BackPlants();
@@ -34,8 +41,8 @@ public class SceneCanvas extends JComponent {
         trees = new Trees();
         vines = new Vines();
         sign = new Sign();
-        
-
+    
+        objects.add(secBackground);
         objects.add(background);
         objects.add(mountains);
         objects.add(trees);
@@ -47,22 +54,41 @@ public class SceneCanvas extends JComponent {
         objects.add(roadway);
         objects.add(frontGrass);
         objects.add(frontPlants);
-        
-        
-        
+
+       
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 int mouseX = e.getX();
                 int mouseY = e.getY();
-                
+
                 if (!shedClicked && shed.containsPoint(mouseX, mouseY)) {
-                    System.out.println("Shed clicked!");
-                    shedClicked = true; 
-                    repaint();
+                    shedClicked = true;
+                    BackgroundAnimation(); 
                 }
             }
         });
+    }
+    
+    private void BackgroundAnimation() {
+        movedAmount = 0; 
+    
+        BGRemover = new Timer(16, new ActionListener() { 
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (movedAmount < TARGET_MOVE_AMOUNT) {
+                    trees.moveDown(STEP); 
+                    mountains.moveRight(STEP);
+                    background.moveDown(STEP);
+                    movedAmount += STEP;
+                    repaint();
+                } else {
+                    BGRemover.stop(); 
+                }
+            }
+        });
+
+        BGRemover.start(); 
     }
 
     @Override
@@ -75,8 +101,8 @@ public class SceneCanvas extends JComponent {
         }
     }
 
-    public void changeShed(){
-        if (shedClicked){
+    public void changeShed() {
+        if (shedClicked) {
             objects.remove(shed);
             objects.remove(backGrass);
             objects.remove(roadway);
@@ -88,11 +114,10 @@ public class SceneCanvas extends JComponent {
             objects.add(roadway);
             objects.add(frontGrass);
             objects.add(frontPlants);
-            objects.add(sign);
+            
+
 
             shedClicked = false;
         }
     }
-
-
 }

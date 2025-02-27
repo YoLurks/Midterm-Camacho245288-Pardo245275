@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.geom.*;
 
-public class Circle implements DrawingObject {
+public class Circle extends DrawingObject {
     private double x;
     private double y;
     private double w;
@@ -26,6 +26,23 @@ public class Circle implements DrawingObject {
             g2d.fill(circle);
 
         }
+    
+    @Override
+    public double getY() { 
+        return y;
+    }
+    
+    @Override
+    public void setY(double newY) { 
+        this.y = newY; 
+    }
+    @Override
+    public double getX(){
+        return x;
+    }
 
+    public void setX(double newX){
+        this.x = newX;
+    }
+    }
         
-}

@@ -1,6 +1,6 @@
 import java.awt.*;
 import java.awt.geom.*;
-public class Line implements DrawingObject {
+public class Line extends DrawingObject {
     private double x1;
     private double x2;
     private double y1;
@@ -24,5 +24,24 @@ public class Line implements DrawingObject {
         g2d.setStroke(new BasicStroke(thickness));
         g2d.draw(Line);
        
+    }
+
+    @Override
+    public double getY() { 
+        return y1;
+    }
+    
+    @Override
+    public void setY(double newY) { 
+        this.y1 = newY; 
+    }   
+
+    @Override
+    public double getX(){
+        return x1;
+    }
+
+    public void setX(double newX){
+        this.x1 = newX;
     }
 }

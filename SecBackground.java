@@ -1,12 +1,12 @@
 import java.awt.*;
 import java.awt.geom.*;
-public class Background extends DrawingObject {
+public class SecBackground extends DrawingObject {
     private double x;
     private double y;
     private double w;
     private double h;
     
-    public Background(){
+    public SecBackground(){
         x = 0;
         y = 0;
         w = 800;
@@ -16,7 +16,7 @@ public class Background extends DrawingObject {
     @Override
     public void draw(Graphics2D g){
         Rectangle2D.Double background = new Rectangle2D.Double(x,y,w,h);
-        g.setColor(new Color(83,100,76));
+        g.setColor(new Color(191,245,254));
         g.fill(background);
     }
     @Override
@@ -38,9 +38,4 @@ public class Background extends DrawingObject {
     public void setX(double newX){
         this.x = newX;
     }
-
-    public void moveDown(double amount){
-        this.y += amount;
-        }
-    }
-
+}

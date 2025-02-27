@@ -1,7 +1,9 @@
 import java.awt.*;
 import java.util.ArrayList;
-public class Mountains implements DrawingObject {
+public class Mountains extends DrawingObject {
     private ArrayList<DrawingObject> elements;
+    private double y;
+    private double x;
     public Mountains(){
         elements = new ArrayList<>();
         elements.add(new Triangle(-115.5,277.1,287.1,251.2,new Color(67,127,82), 0));
@@ -21,5 +23,29 @@ public class Mountains implements DrawingObject {
         g2dC.dispose();
     }
 }
+     @Override
+    public double getY() { 
+        return y;
+    }
+    
+    @Override
+    public void setY(double newY) { 
+        this.y = newY; 
+    }
 
+    @Override
+    public double getX(){
+        return x;
+    }
+    
+    @Override
+    public void setX(double newX){
+        this.x = newX;
+    }
+
+    public void moveRight(double amount) {
+        for (DrawingObject obj : elements) {
+            obj.setX(obj.getX() + amount);
+        }
+    }
 }

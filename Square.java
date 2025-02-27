@@ -1,6 +1,6 @@
 import java.awt.*;
 import java.awt.geom.*;
-public class Square implements DrawingObject {
+public class Square extends DrawingObject {
     private double x;
     private double y;
     private double w;
@@ -35,7 +35,27 @@ public class Square implements DrawingObject {
 
     }
 
-        
+    @Override
+    public double getY() { 
+        return y;}
+
+    @Override
+    public void setY(double newY) { 
+        this.y = newY;
+    }
+
+    @Override
+    public double getX(){
+        return x;
+    }
+
+    @Override
+    public void setX(double newX){
+        this.x = newX;
+    }
+
 }
+        
+
 
 

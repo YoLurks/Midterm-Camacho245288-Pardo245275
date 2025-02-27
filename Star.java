@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 
-public class Star implements DrawingObject {
+public class Star extends DrawingObject {
     private double x;
     private double y;
     private double size;
@@ -36,5 +36,25 @@ public class Star implements DrawingObject {
 
         g.setColor(color);
         g.fill(rotatedStar);
+    }
+
+     @Override
+    public double getY() { 
+        return y;
+    }
+    
+    @Override
+    public void setY(double newY) { 
+        this.y = newY; 
+    }
+
+    @Override
+    public double getX(){
+        return x;
+    }
+
+    @Override
+    public void setX(double newX){
+        this.x = newX;
     }
 }

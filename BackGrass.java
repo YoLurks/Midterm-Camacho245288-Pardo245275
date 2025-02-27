@@ -1,7 +1,9 @@
 import java.awt.*;
 import java.util.ArrayList;
-public class BackGrass implements DrawingObject {
+public class BackGrass extends DrawingObject {
     private ArrayList<DrawingObject> elements;
+    private double y;
+    private double x;
     public BackGrass(){
         elements = new ArrayList<>();
         elements.add(new Circle(60.4,451.4,659.4,282.5,new Color(126,217,87), 0));
@@ -28,5 +30,22 @@ public class BackGrass implements DrawingObject {
         g2dC.dispose();
     }
 }
+    @Override
+    public double getY() { 
+        return y;
+    }
+    
+    @Override
+    public void setY(double newY) { 
+        this.y = newY; 
+    }
 
+    @Override
+    public double getX(){
+        return x;
+    }
+
+    public void setX(double newX){
+        this.x = newX;
+    }
 }

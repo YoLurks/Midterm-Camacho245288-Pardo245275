@@ -1,8 +1,10 @@
 import java.awt.*;
 import java.util.ArrayList;
 
-public class SecShed implements DrawingObject {
+public class SecShed extends DrawingObject {
     private ArrayList<DrawingObject> elements;
+    private double y;
+    private double x;
 
     public SecShed(){
 
@@ -107,6 +109,24 @@ public class SecShed implements DrawingObject {
             g2dC.dispose();
         }
         }
+     @Override
+    public double getY() { 
+        return y;
+    }
     
+    @Override
+    public void setY(double newY) { 
+        this.y = newY; 
+    }
+
+    @Override
+    public double getX(){
+        return x;
+    }
+
+    @Override
+    public void setX(double newX){
+        this.x = newX;
+    }
         
 }

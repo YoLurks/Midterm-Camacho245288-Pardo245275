@@ -1,7 +1,9 @@
 import java.awt.*;
 import java.util.ArrayList;
-public class Trees implements DrawingObject {
+public class Trees extends DrawingObject {
     private ArrayList<DrawingObject> elements;
+    private double y;
+    private double x;
     public Trees(){
         elements = new ArrayList<>();
         elements.add(new Square(77.3,95.5,149.4,394.3,new Color(99,93,79), 0));
@@ -39,5 +41,29 @@ public class Trees implements DrawingObject {
         g2dC.dispose();
     }
 }
+    public void moveDown(double amount) {
+        for (DrawingObject obj : elements) {
+            obj.setY(obj.getY() + amount);
+        }
+}
 
+     @Override
+    public double getY() { 
+        return y;
+    }
+    
+    @Override
+    public void setY(double newY) { 
+        this.y = newY; 
+    }
+
+    @Override
+    public double getX(){
+        return x;
+    }
+
+    @Override
+    public void setX(double newX){
+        this.x = newX;
+    }
 }

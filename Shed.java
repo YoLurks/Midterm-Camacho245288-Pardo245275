@@ -1,12 +1,13 @@
 import java.awt.*;
 import java.util.ArrayList;
 
-public class Shed implements DrawingObject {
+public class Shed extends DrawingObject {
     private ArrayList<DrawingObject> elements;
     private double x;
     private double y;
     private double width;
     private double height;
+
     public Shed(){
 
         elements = new ArrayList<>();
@@ -14,7 +15,6 @@ public class Shed implements DrawingObject {
         y = 250;
         width = 145;
         height = 210;
-
 
         //shed background
         elements.add(new Square(90.8,205.5,40.5,304.5,new Color(124,115,95), 0));
@@ -85,17 +85,35 @@ public class Shed implements DrawingObject {
     }
 
      @Override
-        public void draw(Graphics2D g) {
-        Graphics2D g2d = (Graphics2D) g;
-        for (DrawingObject obj : elements) {
-            Graphics2D g2dC = (Graphics2D) g2d.create();
-            obj.draw(g2dC);
-            g2dC.dispose();
-        }
-        }
-        public boolean containsPoint(int mouseX, int mouseY) {
-            return (mouseX >= x && mouseX <= x + width) && (mouseY >= y && mouseY <= y + height);
-        }
+    public void draw(Graphics2D g) {
+    Graphics2D g2d = (Graphics2D) g;
+    for (DrawingObject obj : elements) {
+        Graphics2D g2dC = (Graphics2D) g2d.create();
+        obj.draw(g2dC);
+        g2dC.dispose();
+    }
+    }
+    public boolean containsPoint(int mouseX, int mouseY) {
+        return (mouseX >= x && mouseX <= x + width) && (mouseY >= y && mouseY <= y + height);
+    }
 
-        
+        @Override
+    public double getY() { 
+    return y;
+    }
+
+    @Override
+    public void setY(double newY) { 
+        this.y = newY; 
+    }
+    
+    @Override
+    public double getX(){
+        return x;
+    }
+
+    @Override
+    public void setX(double newX){
+        this.x = newX;
+    }
 }

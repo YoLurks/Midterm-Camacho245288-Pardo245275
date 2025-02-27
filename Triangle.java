@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 
-public class Triangle implements DrawingObject {
+public class Triangle extends DrawingObject {
     private double x;
     private double y;
     private double w;
@@ -29,5 +29,25 @@ public class Triangle implements DrawingObject {
 
         g.setColor(color);
         g.fill(rotatedTriangle);
+    }
+
+     @Override
+    public double getY() { 
+        return y;
+    }
+    
+    @Override
+    public void setY(double newY) { 
+        this.y = newY; 
+    }
+
+    @Override
+    public double getX(){
+        return x;
+    }
+
+    @Override
+    public void setX(double newX){
+        this.x = newX;
     }
 }
