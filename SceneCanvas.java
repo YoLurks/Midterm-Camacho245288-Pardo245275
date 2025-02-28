@@ -1,11 +1,16 @@
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+import javax.sound.sampled.*;
 import javax.swing.*;
+
 
 public class SceneCanvas extends JComponent {
     private ArrayList<DrawingObject> objects; 
     private Shed shed;  
+    private boolean shedClickedTwice = false;
     private boolean shedClicked = false;
     private SecShed secShed;
     private BackGrass backGrass;
@@ -21,11 +26,26 @@ public class SceneCanvas extends JComponent {
     private Star star;
     private SecBackground secBackground;
     private Timer BGRemover;
-    private final int TARGET_MOVE_AMOUNT = 1000; 
-    private final int STEP = 5; 
-    private int movedAmount = 0; 
+    private Clip clip;
+    private Clip clip2;
+    private File music;
+    private File music2;
+    private final int TARGET_MOVE_AMOUNT;
+    private final int STEP;
+    private int movedAmount;
 
-    public SceneCanvas() {
+    public SceneCanvas() throws UnsupportedAudioFileException, IOException, LineUnavailableException{
+        TARGET_MOVE_AMOUNT = 1000;
+        STEP = 3;
+        movedAmount = 0;
+        music = new File("shrek.AIFF");
+        music2 = new File("accidentally.AIFF");
+        AudioInputStream audioStream = AudioSystem.getAudioInputStream(music);
+        AudioInputStream audioStream2 = AudioSystem.getAudioInputStream(music2);
+        clip2 = AudioSystem.getClip();
+        clip = AudioSystem.getClip();
+        clip.open(audioStream); 
+        clip2.open(audioStream2);
         setPreferredSize(new Dimension(800, 600));
         objects = new ArrayList<>();
         secBackground = new SecBackground();
@@ -55,7 +75,6 @@ public class SceneCanvas extends JComponent {
         objects.add(frontGrass);
         objects.add(frontPlants);
 
-       
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -64,11 +83,18 @@ public class SceneCanvas extends JComponent {
 
                 if (!shedClicked && shed.containsPoint(mouseX, mouseY)) {
                     shedClicked = true;
+                    clip.start();
+                } else if (shedClicked && !shedClickedTwice && shed.containsPoint(mouseX, mouseY)) {
+                    shedClickedTwice = true;
                     BackgroundAnimation(); 
+                    clip2.start();
+            
                 }
             }
         });
     }
+
+    
     
     private void BackgroundAnimation() {
         movedAmount = 0; 
@@ -87,7 +113,6 @@ public class SceneCanvas extends JComponent {
                 }
             }
         });
-
         BGRemover.start(); 
     }
 
@@ -115,8 +140,6 @@ public class SceneCanvas extends JComponent {
             objects.add(frontGrass);
             objects.add(frontPlants);
             
-
-
             shedClicked = false;
         }
     }
