@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import javax.sound.sampled.*;
 import javax.swing.*;
 
-
 public class SceneCanvas extends JComponent {
     private ArrayList<DrawingObject> objects; 
     private Shed shed;  
@@ -23,7 +22,7 @@ public class SceneCanvas extends JComponent {
     private Trees trees;
     private Vines vines;
     private Sign sign;
-    private Star star;
+    private Stars stars;
     private SecBackground secBackground;
     private Timer BGRemover;
     private Clip clip;
@@ -61,8 +60,10 @@ public class SceneCanvas extends JComponent {
         trees = new Trees();
         vines = new Vines();
         sign = new Sign();
+        stars = new Stars();
     
         objects.add(secBackground);
+        objects.add(stars);
         objects.add(background);
         objects.add(mountains);
         objects.add(trees);

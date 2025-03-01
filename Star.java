@@ -1,41 +1,76 @@
 import java.awt.*;
-import java.awt.geom.AffineTransform;
+import java.awt.geom.*;
 
 public class Star extends DrawingObject {
     private double x;
     private double y;
-    private double size;
+    private double w;
+    private double h;
     private Color color;
-    private double rotation;
 
-    public Star(double x, double y, double size, Color color, double rotation) {
+    public Star(double x, double y, double w, double h, Color color) {
         this.x = x;
         this.y = y;
-        this.size = size;
+        this.w = w;
+        this.h = h;
         this.color = color;
-        this.rotation = rotation;
     }
 
     @Override
     public void draw(Graphics2D g) {
-        int[] xPoints = new int[10];
-        int[] yPoints = new int[10];
-        double angle = Math.PI / 5;
+        Path2D star = new Path2D.Double();
 
-        for (int i = 0; i < 10; i++) {
-            double r = (i % 2 == 0) ? size : size / 2.5;
-            xPoints[i] = (int) (x + r * Math.cos(i * 2 * angle - Math.PI / 2));
-            yPoints[i] = (int) (y + r * Math.sin(i * 2 * angle - Math.PI / 2));
-        }
+        //middle upper
+        double x1 = x + w / 2;
+        double y1 = y;
 
-        Polygon star = new Polygon(xPoints, yPoints, 10);
+        //left side
+        double x2 = x + w / 4;
+        double y2 = y + h / 4;
 
-        AffineTransform transform = new AffineTransform();
-        transform.rotate(Math.toRadians(rotation), x, y);
-        Shape rotatedStar = transform.createTransformedShape(star);
+        double x3 = x;
+        double y3 = y2;
 
+        double x4 = x2;
+        double y4 = y + h / 2;
+        
+        double x5 = x;
+        double y5 = y + h * 7/8;
+
+        //middle lower
+        double x6 = x1;
+        double h75 = h * 3/4;
+        double y6 = y + h75;
+        
+        //right side 
+        double x7 = x + w;
+        double y7 = y + h * 7/8;
+
+        double w75 = w * 3/4;
+        double x8 = x + w75;
+        double y8 = y4;
+
+        double x9 = x + w;
+        double y9 = y + h /4;
+        
+        double x10 = x8;
+        double y10 = y9;
+        
+        // the ten points that are very skibidi
+        star.moveTo(x1, y1);
+        star.lineTo(x2, y2);
+        star.lineTo(x3, y3);
+        star.lineTo(x4, y4);
+        star.lineTo(x5, y5);
+        star.lineTo(x6, y6);
+        star.lineTo(x7, y7);
+        star.lineTo(x8, y8);
+        star.lineTo(x9, y9);
+        star.lineTo(x10, y10);
+
+        star.closePath();
         g.setColor(color);
-        g.fill(rotatedStar);
+        g.fill(star);
     }
 
      @Override
