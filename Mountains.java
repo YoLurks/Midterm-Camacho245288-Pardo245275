@@ -43,6 +43,7 @@ public class Mountains extends DrawingObject {
         this.x = newX;
     }
 
+    
     public void moveRight(double amount) {
         for (DrawingObject obj : elements) {
             obj.setX(obj.getX() + amount);

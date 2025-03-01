@@ -97,24 +97,21 @@ public class SceneCanvas extends JComponent {
     
     
     private void BackgroundAnimation() {
-        movedAmount = 0; 
-    
-        BGRemover = new Timer(16, new ActionListener() { 
+        Timer BGRemover = new Timer(16, new ActionListener() { 
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (movedAmount < TARGET_MOVE_AMOUNT) {
-                    trees.moveDown(STEP); 
-                    mountains.moveRight(STEP);
-                    background.moveDown(STEP);
-                    movedAmount += STEP;
-                    repaint();
-                } else {
-                    BGRemover.stop(); 
-                }
+                trees.moveDown(STEP); 
+                mountains.moveRight(STEP);
+                background.moveDown(STEP);
+                backPlants.updateSway();
+                frontPlants.updateSway();
+    
+                repaint();
             }
         });
         BGRemover.start(); 
     }
+
 
     @Override
     protected void paintComponent(Graphics g) {
