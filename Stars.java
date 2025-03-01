@@ -14,39 +14,14 @@ public class Stars extends DrawingObject {
         elements.add(new Star(736.4, 375.6,30.5, 29.3, Color.WHITE));
         elements.add(new Star(15.3, 328.5,30.5, 29.3, Color.WHITE));
     }
-
-    @Override
-    public void draw(Graphics2D g) {
-    Graphics2D g2d = (Graphics2D) g;
-    for (DrawingObject obj : elements) {
-        Graphics2D g2dC = (Graphics2D) g2d.create();
-        obj.draw(g2dC);
-        g2dC.dispose();
-    }
-}
-    public void moveDown(double amount) {
+        @Override
+        public void draw(Graphics2D g) {
+        Graphics2D g2d = (Graphics2D) g;
+        RenderingHints rh = new RenderingHints(RenderingHints.KEY_ANTIALIASING,RenderingHints.VALUE_ANTIALIAS_ON);
+        g2d.setRenderingHints(rh);
         for (DrawingObject obj : elements) {
-            obj.setY(obj.getY() + amount);
+            obj.draw(g2d);
         }
-}
 
-     @Override
-    public double getY() { 
-        return y;
-    }
-    
-    @Override
-    public void setY(double newY) { 
-        this.y = newY; 
-    }
-
-    @Override
-    public double getX(){
-        return x;
-    }
-
-    @Override
-    public void setX(double newX){
-        this.x = newX;
     }
 }

@@ -22,14 +22,14 @@ public class BackGrass extends DrawingObject {
     }
 
     @Override
-    public void draw(Graphics2D g) {
-    Graphics2D g2d = (Graphics2D) g;
-    for (DrawingObject obj : elements) {
-        Graphics2D g2dC = (Graphics2D) g2d.create();
-        obj.draw(g2dC);
-        g2dC.dispose();
+        public void draw(Graphics2D g) {
+        Graphics2D g2d = (Graphics2D) g;
+        RenderingHints rh = new RenderingHints(RenderingHints.KEY_ANTIALIASING,RenderingHints.VALUE_ANTIALIAS_ON);
+        g2d.setRenderingHints(rh);
+        for (DrawingObject obj : elements) {
+            obj.draw(g2d);
+        }
     }
-}
     @Override
     public double getY() { 
         return y;

@@ -15,9 +15,7 @@ public class Roadway extends DrawingObject {
     public void draw(Graphics2D g) {
     Graphics2D g2d = (Graphics2D) g;
     for (DrawingObject obj : elements) {
-        Graphics2D g2dC = (Graphics2D) g2d.create();
-        obj.draw(g2dC);
-        g2dC.dispose();
+        obj.draw(g2d);
     }
 }
      @Override
