@@ -7,8 +7,6 @@ public class SceneFrame {
     private JFrame frame;
     private SceneCanvas scenecanvas;
     
-
-
     public SceneFrame() throws UnsupportedAudioFileException, IOException, LineUnavailableException{
         frame = new JFrame();
         scenecanvas = new SceneCanvas();

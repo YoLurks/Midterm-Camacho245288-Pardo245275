@@ -80,8 +80,8 @@ public class Shed extends DrawingObject {
         elements.add(new Square(78.3, 207.9, 276.8, 3.6, new Color(126, 217, 87), -9.3));
         elements.add(new Triangle(127.6, 224.3, 26.6, 23.2, new Color(126, 217, 87), 170.6));
         elements.add(new Triangle(133.4, 215.3, 18.4, 16.1, new Color(126, 217, 87), 170.6));
-        elements.add(new Triangle(357.2, 186.8, 26.2, 23.2, new Color(126, 217, 87), 165.1));
-        elements.add(new Triangle(336.8, 189.3, 26.6, 23.2, new Color(126, 217, 87), 170.6));
+        elements.add(new Triangle(336.8, 189.3, 26.2, 23.2, new Color(126, 217, 87), 165.1));
+        elements.add(new Triangle(357.2, 186.8, 26.6, 23.2, new Color(126, 217, 87), 170.6));
     }
 
      @Override

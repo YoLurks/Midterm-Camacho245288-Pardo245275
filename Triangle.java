@@ -20,27 +20,26 @@ public class Triangle extends DrawingObject {
 
     @Override
     public void draw(Graphics2D g) {
-        Path2D triangle = new Path2D.Double();
-    
-        double x1 = x + w / 2;
-        double y1 = y;    
-        double x2 = x;
-        double y2 = y + h;            
-        double x3 = x + w;
-        double y3 = y + h;      
+
+        Path2D triangle = new Path2D.Double();   
         
+        double x1 = x + w / 2;
+        double y1 = y;
+
+        double x2 = x;
+        double y2 = y + h;
+
+        double x3 = x + w;
+        double y3 = y + h;
+
         triangle.moveTo(x1, y1);
         triangle.lineTo(x2, y2);
         triangle.lineTo(x3, y3);
         triangle.closePath();
-    
 
-        double centerX = (x1 + x2 + x3) / 3;
-        double centerY = (y1 + y2 + y3) / 3;
-    
         AffineTransform transform = new AffineTransform();
         
-        transform.rotate(Math.toRadians(rotation), centerX, centerY);
+        transform.rotate(Math.toRadians(rotation), x, y);
         Shape rotatedTriangle = transform.createTransformedShape(triangle);
     
         g.setColor(color);
