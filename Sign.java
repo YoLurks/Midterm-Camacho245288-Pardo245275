@@ -13,6 +13,8 @@ public class Sign extends DrawingObject {
         elements.add(new Triangle(724.1,407.7,32,28,new Color(67,127,82), 102));
         elements.add(new Line(615.6,434.6,672.4,438.1,new Color(99,93,78), 4));
         elements.add(new Triangle(615,420.2,17.3,15.1,new Color(99,93,78), 30));
+        elements.add(new Text(615, 405, "CLICK", new Color(192, 179, 153),25, 0));
+        elements.add(new Text(619, 425, "DOOR", new Color(192, 179, 153),23, 0));
 
     }
 
@@ -24,25 +26,6 @@ public class Sign extends DrawingObject {
         for (DrawingObject obj : elements) {
             obj.draw(g2d);
         }   
-    }
-    @Override
-    public double getY() { 
-        return y ;
-    }
-
-    @Override
-    public void setY(double newY) { 
-        this.y = newY;
-    }
-
-    @Override
-    public double getX(){
-        return x;
-    }
-
-    @Override
-    public void setX(double newX){
-        this.x = newX;
     }
 
 }

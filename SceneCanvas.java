@@ -17,6 +17,7 @@ public class SceneCanvas extends JComponent {
     private BackPlants backPlants;
     private Roadway roadway;
     private FrontPlants frontPlants;
+    private TextTitle textTitle;
     private Background background;
     private Mountains mountains;
     private Trees trees;
@@ -71,9 +72,11 @@ public class SceneCanvas extends JComponent {
         stars = new Stars();
         stars2 = new Stars2();
         stars3 = new Stars3();
+        textTitle = new TextTitle();
     
         objects.add(scanned);
         objects.add(secBackground);
+        objects.add(textTitle);
         objects.add(stars);
         objects.add(background);
         objects.add(mountains);
