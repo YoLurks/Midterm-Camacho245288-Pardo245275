@@ -23,20 +23,27 @@ public class SceneCanvas extends JComponent {
     private Vines vines;
     private Sign sign;
     private Stars stars;
+    private Stars2 stars2;
+    private Stars3 stars3;
     private SecBackground secBackground;
     private Timer BGRemover;
+    private Timer Slide;
     private Clip clip;
     private Clip clip2;
     private File music;
     private File music2;
-    private final int TARGET_MOVE_AMOUNT;
+    private Scanned scanned;
     private final int STEP;
     private int movedAmount;
+    private boolean delay;
+
+
 
     public SceneCanvas() throws UnsupportedAudioFileException, IOException, LineUnavailableException{
-        TARGET_MOVE_AMOUNT = 1000;
+
         STEP = 3;
         movedAmount = 0;
+        delay = false;
         music = new File("shrek.AIFF");
         music2 = new File("accidentally.AIFF");
         AudioInputStream audioStream = AudioSystem.getAudioInputStream(music);
@@ -47,6 +54,7 @@ public class SceneCanvas extends JComponent {
         clip2.open(audioStream2);
         setPreferredSize(new Dimension(800, 600));
         objects = new ArrayList<>();
+        scanned = new Scanned(-2,9000,58.3,67.5);
         secBackground = new SecBackground();
         backGrass = new BackGrass();
         frontGrass = new FrontGrass();
@@ -61,7 +69,10 @@ public class SceneCanvas extends JComponent {
         vines = new Vines();
         sign = new Sign();
         stars = new Stars();
+        stars2 = new Stars2();
+        stars3 = new Stars3();
     
+        objects.add(scanned);
         objects.add(secBackground);
         objects.add(stars);
         objects.add(background);
@@ -88,6 +99,9 @@ public class SceneCanvas extends JComponent {
                 } else if (shedClicked && !shedClickedTwice && shed.containsPoint(mouseX, mouseY)) {
                     shedClickedTwice = true;
                     BackgroundAnimation(); 
+                    if (delay){
+                        SlideAnimation();
+                    }
                     clip2.start();
             
                 }
@@ -98,25 +112,62 @@ public class SceneCanvas extends JComponent {
     
     
     private void BackgroundAnimation() {
-        Timer BGRemover = new Timer(16, new ActionListener() { 
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                trees.moveDown(STEP); 
-                mountains.moveRight(STEP);
-                background.moveDown(STEP);
-                backPlants.updateSway();
-                frontPlants.updateSway();
-    
-                repaint();
+    Timer BGRemover = new Timer(16, new ActionListener() { 
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            scanned.moveRight(STEP);
+            trees.moveDown(STEP); 
+            mountains.moveRight(STEP);
+            background.moveDown(STEP);
+            backPlants.updateSway();
+            frontPlants.updateSway();
+            scanned.setX(scanned.getX() + STEP);
+            repaint();
+            if (scanned.getX() > 780 && !delay) {
+                delay = true; 
+                SlideAnimation(); 
             }
-        });
-        BGRemover.start(); 
+        }
+    });
+        BGRemover.start();
     }
+
+
+    private void SlideAnimation() {
+    Timer Slide = new Timer(370, new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (movedAmount == 0) {
+                objects.remove(stars);
+                objects.add(stars2);
+
+
+            }else if (movedAmount == 1){
+                objects.remove(stars2);
+                objects.add(stars3);
+
+            }else if (movedAmount == 2){
+                objects.remove(stars3);
+                objects.add(stars);
+
+            }
+            ++movedAmount;
+            if (movedAmount >= 3){
+                movedAmount = 0;
+            }
+            
+        }
+        });
+        Slide.start();
+    }
+
 
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        
+
         Graphics2D g2d = (Graphics2D) g;
         changeShed();
         for (DrawingObject obj : objects) {

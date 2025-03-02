@@ -12,7 +12,6 @@ public class BackPlants extends DrawingObject {
         lines = new ArrayList<>();
         circles = new ArrayList<>();
 
-    
         lines.add(new Line(394.5, 363.1, 417.2, 559.7, new Color(107, 173, 78), 1));
         lines.add(new Line(418.1, 368, 418.1, 565.9, new Color(107, 173, 78), 1));
         lines.add(new Line(439.2, 357.4, 395.3, 550.3, new Color(107, 173, 78), 1));

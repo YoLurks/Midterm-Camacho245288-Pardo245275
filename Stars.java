@@ -2,6 +2,7 @@ import java.awt.*;
 import java.util.ArrayList;
 public class Stars extends DrawingObject {
     private ArrayList<DrawingObject> elements;
+    private double x,y;
     public Stars(){
         elements = new ArrayList<>();
         elements.add(new Star(26.9, 125,23.4, 20.5, Color.WHITE));
@@ -22,4 +23,5 @@ public class Stars extends DrawingObject {
         }
 
     }
+
 }

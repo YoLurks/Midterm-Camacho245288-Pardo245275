@@ -2,12 +2,14 @@ import java.awt.*;
 import java.awt.geom.*;
 public class Background extends DrawingObject {
     private double x;
+    private double x1;
     private double y;
     private double w;
     private double h;
     
     public Background(){
         x = 0;
+        x1 = 800;
         y = 0;
         w = 800;
         h = 600;
@@ -42,5 +44,9 @@ public class Background extends DrawingObject {
     public void moveDown(double amount){
         this.y += amount;
         }
+
+    public boolean containsPoint(int mouseX, int mouseY) {
+        return (mouseX >= x1 && mouseX <= x1 + w) && (mouseY >= y && mouseY <= y + h);
+    }
     }
 

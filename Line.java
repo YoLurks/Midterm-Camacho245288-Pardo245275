@@ -19,8 +19,6 @@ public class Line extends DrawingObject {
     @Override
     public void draw(Graphics2D g){
         Graphics2D g2d = (Graphics2D) g;
-        RenderingHints rh = new RenderingHints(RenderingHints.KEY_ANTIALIASING,RenderingHints.VALUE_ANTIALIAS_ON);
-        g2d.setRenderingHints(rh);
         Line2D.Double Line = new Line2D.Double(x1,y1,x2,y2);
         g2d.setColor(color);
         g2d.setStroke(new BasicStroke(thickness));

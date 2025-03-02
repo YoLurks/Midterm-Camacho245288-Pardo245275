@@ -6,7 +6,7 @@ public abstract class DrawingObject {
     public abstract void draw(Graphics2D g);
     
 
-
+    
     public double getY(){
         return y;
     }

@@ -1,23 +1,18 @@
 import java.awt.*;
 import java.util.ArrayList;
-public class Mountains extends DrawingObject {
+public class Scanned extends DrawingObject {
     private ArrayList<DrawingObject> elements;
     private double y;
     private double x;
     private double width;
     private double height;
-    public Mountains(){
+    public Scanned(double x, double y, double w, double h){
         elements = new ArrayList<>();
-        x = -2;
-        y = 0;
-        width = 287;
-        height = 251;
-        elements.add(new Triangle(-115.5,277.1,287.1,251.2,new Color(67,127,82), 0));
-        elements.add(new Triangle(-61.2,260.2,287.1,251.2,new Color(67,127,82), 0));
-        elements.add(new Triangle(190.5,235.4,287.1,251.2,new Color(67,127,82), 0));
-        elements.add(new Triangle(284.6,238.6,287.1,251.2,new Color(67,127,82), 0));
-        elements.add(new Triangle(478.2,270.6,287.1,251.2,new Color(67,127,82), 0));
-        elements.add(new Triangle(603.1,285.1,287.1,251.2,new Color(67,127,82), 0));  
+        elements.add(new Square(x,y,w,h,new Color(244,250,252, 0),0));
+        this.x = x;
+        this.y = y;
+        this.width = w;
+        this.height = h;
     }
 
     @Override
@@ -54,7 +49,4 @@ public class Mountains extends DrawingObject {
         }
     }
 
-    public boolean containsPoint(int mouseX, int mouseY) {
-        return (mouseX >= x && mouseX <= x + width) && (mouseY >= y && mouseY <= y + height);
-    }
 }
