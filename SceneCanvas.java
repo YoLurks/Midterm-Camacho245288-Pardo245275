@@ -37,11 +37,13 @@ public class SceneCanvas extends JComponent {
     private final int STEP;
     private int movedAmount;
     private boolean delay;
-
+    private Color placeColor;
+    private int counter;
+    
 
 
     public SceneCanvas() throws UnsupportedAudioFileException, IOException, LineUnavailableException{
-
+        counter = 0;
         STEP = 3;
         movedAmount = 0;
         delay = false;
@@ -128,22 +130,38 @@ public class SceneCanvas extends JComponent {
             if (scanned.getX() > 780 && !delay) {
                 delay = true; 
                 SlideAnimation(); 
+                changeColor();
             }
         }
     });
         BGRemover.start();
     }
 
-    // private void BackgroundColor() {
-    //     Timer B = new Timer(16, new ActionListener() { 
-    //         @Override
-    //         public void actionPerformed(ActionEvent e) {
-              
-    //         }
-    //     });
-    //         BGRemover.start();
-    //     }
+    private void changeColor(){
+        Timer changeColor = new Timer(1000, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(counter == 0){
+                    placeColor = new Color(138,71,71);
+                } else if (counter == 1){
+                    placeColor = new Color(71, 112,138);
+                } else if (counter == 2){
+                    placeColor = new Color(74, 138, 71);
+                } else if (counter == 3){
+                    placeColor = new Color(138, 131,71);
+                } else if (counter == 4){
+                    placeColor = new Color(115, 71, 138);
+                    counter = -1;
+                }
+                counter++;
 
+                SecShed.getParty().changeColor(placeColor);
+                revalidate();
+                repaint();
+            }
+            });
+            changeColor.start();
+    }
 
     private void SlideAnimation() {
     Timer Slide = new Timer(370, new ActionListener() {
