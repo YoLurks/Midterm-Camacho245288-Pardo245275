@@ -104,6 +104,7 @@ public class SceneCanvas extends JComponent {
                     BackgroundAnimation(); 
                     if (delay){
                         SlideAnimation();
+
                     }
                     clip2.start();
             
@@ -111,8 +112,6 @@ public class SceneCanvas extends JComponent {
             }
         });
     }
-
-    
     
     private void BackgroundAnimation() {
     Timer BGRemover = new Timer(16, new ActionListener() { 
@@ -134,6 +133,16 @@ public class SceneCanvas extends JComponent {
     });
         BGRemover.start();
     }
+
+    // private void BackgroundColor() {
+    //     Timer B = new Timer(16, new ActionListener() { 
+    //         @Override
+    //         public void actionPerformed(ActionEvent e) {
+              
+    //         }
+    //     });
+    //         BGRemover.start();
+    //     }
 
 
     private void SlideAnimation() {
