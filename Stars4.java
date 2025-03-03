@@ -1,13 +1,14 @@
 import java.awt.*;
 import java.util.ArrayList;
-public class Stars2 extends DrawingObject {
+public class Stars4 extends DrawingObject {
     private ArrayList<DrawingObject> elements;
     private double x,y;
-    public Stars2(){
+    public Stars4(){
         elements = new ArrayList<>();
-        elements.add(new Star(26.9, 120,26, 25, Color.WHITE));
-        elements.add(new Star(724.8, 140,35, 35, Color.WHITE));
-        elements.add(new Star(600.5, 295,35, 35, Color.WHITE));
+        elements.add(new Star(204.4, 81.8,23.4, 20.5, Color.WHITE));
+        elements.add(new Star(705.9, 20.5,30.4, 29.3, Color.WHITE));
+        elements.add(new Star(736.4, 375.6,30.5, 29.3, Color.WHITE));
+        elements.add(new Star(15.3, 328.5,30.5, 29.3, Color.WHITE));
     }
         @Override
         public void draw(Graphics2D g) {
@@ -19,5 +20,6 @@ public class Stars2 extends DrawingObject {
         }
 
     }
+
 
 }

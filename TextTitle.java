@@ -7,8 +7,10 @@ public class TextTitle extends DrawingObject {
     
     public TextTitle(){
         elements = new ArrayList<>();
-        elements.add(new Text(334, 90, "ACCIDENTALLY", Color.WHITE,50, 0));
-        elements.add(new Text(334, 150, "IN LOVE", Color.WHITE,50, 0));
+        elements.add(new Text(334, 89, "ACCIDENTALLY", Color.BLACK,46, 0));
+        elements.add(new Text(330, 86, "ACCIDENTALLY", new Color(255,252,240),46, 0));
+        elements.add(new Text(330, 149, "IN LOVE", Color.BLACK,46, 0));
+        elements.add(new Text(326, 145, "IN LOVE", new Color(255,252,240),46, 0));
 
     }
 

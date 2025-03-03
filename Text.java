@@ -26,7 +26,7 @@ public class Text extends DrawingObject {
         Graphics2D g2d = (Graphics2D) g;
 
         g2d.rotate(Math.toRadians(rotation), x, y);
-        g2d.setFont(new Font("HelveticaNeue",Font.BOLD , size));
+        g2d.setFont(new Font("Chalkboard",Font.BOLD , size));
         g2d.setColor(color);
         g2d.drawString(s, x, y);
 

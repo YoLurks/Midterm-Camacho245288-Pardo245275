@@ -26,6 +26,9 @@ public class SceneCanvas extends JComponent {
     private Stars stars;
     private Stars2 stars2;
     private Stars3 stars3;
+    private Stars4 stars4;
+    private Stars5 stars5;
+    private Stars6 stars6;
     private SecBackground secBackground;
     private Timer BGRemover;
     private Timer Slide;
@@ -44,7 +47,7 @@ public class SceneCanvas extends JComponent {
 
     public SceneCanvas() throws UnsupportedAudioFileException, IOException, LineUnavailableException{
         counter = 0;
-        STEP = 3;
+        STEP = 4;
         movedAmount = 0;
         delay = false;
         music = new File("shrek.AIFF");
@@ -74,12 +77,16 @@ public class SceneCanvas extends JComponent {
         stars = new Stars();
         stars2 = new Stars2();
         stars3 = new Stars3();
+        stars4 = new Stars4();
+        stars5 = new Stars5();
+        stars6 = new Stars6();
         textTitle = new TextTitle();
     
         objects.add(scanned);
         objects.add(secBackground);
         objects.add(textTitle);
         objects.add(stars);
+        objects.add(stars6);
         objects.add(background);
         objects.add(mountains);
         objects.add(trees);
@@ -138,7 +145,7 @@ public class SceneCanvas extends JComponent {
     }
 
     private void changeColor(){
-        Timer changeColor = new Timer(1000, new ActionListener() {
+        Timer changeColor = new Timer(800, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(counter == 0){
@@ -166,28 +173,34 @@ public class SceneCanvas extends JComponent {
     private void SlideAnimation() {
     Timer Slide = new Timer(370, new ActionListener() {
         @Override
-        public void actionPerformed(ActionEvent e) {
-            if (movedAmount == 0) {
-                objects.remove(stars);
-                objects.add(stars2);
+    public void actionPerformed(ActionEvent e) {
+        if (movedAmount == 0) {
+            objects.remove(stars);
+            objects.remove(stars6);
+            objects.add(stars2);
+            objects.add(stars5);
 
 
-            }else if (movedAmount == 1){
-                objects.remove(stars2);
-                objects.add(stars3);
+        }else if (movedAmount == 1){
+            objects.remove(stars2);
+            objects.remove(stars5);
+            objects.add(stars3);
+            objects.add(stars4);
 
-            }else if (movedAmount == 2){
-                objects.remove(stars3);
-                objects.add(stars);
+        }else if (movedAmount == 2){
+            objects.remove(stars3);
+            objects.remove(stars4);
+            objects.add(stars);
+            objects.add(stars6);
 
-            }
-            ++movedAmount;
-            if (movedAmount >= 3){
-                movedAmount = 0;
-            }
-            
         }
-        });
+        ++movedAmount;
+        if (movedAmount >= 3){
+            movedAmount = 0;
+        }
+        
+    }
+    });
         Slide.start();
     }
 

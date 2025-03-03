@@ -6,12 +6,8 @@ public class Stars extends DrawingObject {
     public Stars(){
         elements = new ArrayList<>();
         elements.add(new Star(26.9, 125,23.4, 20.5, Color.WHITE));
-        elements.add(new Star(204.4, 81.8,23.4, 20.5, Color.WHITE));
-        elements.add(new Star(705.9, 20.5,30.4, 29.3, Color.WHITE));
         elements.add(new Star(724.8, 148.6,30.5, 29.3, Color.WHITE));
         elements.add(new Star(600.5, 300,30.5, 29.3, Color.WHITE));
-        elements.add(new Star(736.4, 375.6,30.5, 29.3, Color.WHITE));
-        elements.add(new Star(15.3, 328.5,30.5, 29.3, Color.WHITE));
     }
         @Override
         public void draw(Graphics2D g) {
