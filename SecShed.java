@@ -6,10 +6,14 @@ public class SecShed extends DrawingObject {
     private double y;
     private double x;
     private static Circle partyCircle;
+    private static Triangle partyTraingleLeft;
+    private static Triangle partyTraingleRight;
 
     public SecShed(){
         elements = new ArrayList<>();
 
+        partyTraingleLeft = new Triangle(202.8, 202.6, 171.6, 283.4, new Color(255, 87,87, 0), 20.5);
+        partyTraingleRight = new Triangle(366.8,242, 492.1, 209.2, new Color(82, 113,255, 0), 91.5);
         partyCircle = new Circle(131.1,271,180,279.3,new Color(58,67,54),0);
 
         //shed background
@@ -47,11 +51,9 @@ public class SecShed extends DrawingObject {
         elements.add(new Triangle(185.1,441.5,49.2,49.1,new Color(70,79,66), 1.4));
         elements.add(new Triangle(249.7,449.7,32.2,28.2,new Color(70,79,66), -12.4));
 
-
-        
-        elements.add(partyCircle);
-
-       
+        elements.add(partyTraingleLeft);
+        elements.add(partyTraingleRight);
+        // elements.add(partyCircle);
 
         //shed supports
         elements.add(new Square(294.7,180.9,18.8,289.8,new Color(167,151,119), 0));
@@ -133,7 +135,11 @@ public class SecShed extends DrawingObject {
     }
         
 
-    public static Circle getParty(){
-        return partyCircle;
+    public static Triangle getPartyTraingleLeft(){
+        return partyTraingleLeft;
+    }
+
+    public static Triangle getPartyTraingleRight(){
+        return partyTraingleRight;
     }
 }

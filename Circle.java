@@ -44,8 +44,5 @@ public class Circle extends DrawingObject {
     public void setX(double newX){
         this.x = newX;
     }
-    public void changeColor(Color newColor){
-        this.color = newColor;
-    }
     }
         

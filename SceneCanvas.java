@@ -41,9 +41,9 @@ public class SceneCanvas extends JComponent {
     private int movedAmount;
     private boolean delay;
     private Color placeColor;
+    private Color newPlaceColor;
     private int counter;
     
-
 
     public SceneCanvas() throws UnsupportedAudioFileException, IOException, LineUnavailableException{
         counter = 0;
@@ -149,20 +149,26 @@ public class SceneCanvas extends JComponent {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(counter == 0){
-                    placeColor = new Color(138,71,71);
+                    placeColor = new Color(138,71,71,80);
+                    newPlaceColor = new Color(74, 138, 71,80);
                 } else if (counter == 1){
-                    placeColor = new Color(71, 112,138);
+                    placeColor = new Color(71, 112,138,80);
+                    newPlaceColor = new Color(115, 71, 138,80);
                 } else if (counter == 2){
-                    placeColor = new Color(74, 138, 71);
+                    placeColor = new Color(74, 138, 71,80);
+                    newPlaceColor = new Color(138, 131,71,80);
                 } else if (counter == 3){
-                    placeColor = new Color(138, 131,71);
+                    placeColor = new Color(138, 131,71,80);
+                    newPlaceColor =  new Color(71, 112,138,80);
                 } else if (counter == 4){
-                    placeColor = new Color(115, 71, 138);
+                    placeColor = new Color(115, 71, 138,80);
+                    newPlaceColor = new Color(138,71,71,80);
                     counter = -1;
                 }
                 counter++;
-
-                SecShed.getParty().changeColor(placeColor);
+                
+                SecShed.getPartyTraingleRight().changeColor(newPlaceColor);
+                SecShed.getPartyTraingleLeft().changeColor(placeColor);
                 revalidate();
                 repaint();
             }
