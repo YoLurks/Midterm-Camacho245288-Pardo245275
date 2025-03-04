@@ -1,10 +1,26 @@
+/**
+	The Star class is a shape class used to represent the stars in the sky.
+
+	@author Lance Arnel G. Camacho (245288)
+    @author John Jerome Pardo (246268)
+	@version March 5, 2025
+	
+	I have not discussed the Java language code in my program 
+	with anyone other than my instructor or the teaching assistants 
+	assigned to this course.
+
+	I have not used Java language code obtained from another student, 
+	or any other unauthorized source, either modified or unmodified.
+
+	If any Java language code or documentation used in my program 
+	was obtained from another source, such as a textbook or website, 
+	that has been clearly noted with a proper citation in the comments 
+	of my program.
+**/
+
 import java.awt.*;
 import java.awt.geom.*;
 
-/**
- * The Star class represents a star shape that can be drawn with a specified size and color.
- * It extends the DrawingObject class and provides functionality to draw the star shape on a Graphics2D object.
- */
 public class Star extends DrawingObject {
     private double x;
     private double y;

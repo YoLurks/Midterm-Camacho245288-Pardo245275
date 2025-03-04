@@ -1,9 +1,26 @@
+/**
+	The SecBackground is used as the next background once the first background leaves through a Timer.
+
+	@author Lance Arnel G. Camacho (245288)
+    @author John Jerome Pardo (246268)
+	@version March 5, 2025
+	
+	I have not discussed the Java language code in my program 
+	with anyone other than my instructor or the teaching assistants 
+	assigned to this course.
+
+	I have not used Java language code obtained from another student, 
+	or any other unauthorized source, either modified or unmodified.
+
+	If any Java language code or documentation used in my program 
+	was obtained from another source, such as a textbook or website, 
+	that has been clearly noted with a proper citation in the comments 
+	of my program.
+**/
+
 import java.awt.*;
 import java.awt.geom.*;
 
-/**
-Represents a background object with a linear gradient fill.
-**/
 public class SecBackground extends DrawingObject {
     private double x;
     private double y;
@@ -11,7 +28,7 @@ public class SecBackground extends DrawingObject {
     private double h;
 
     /**
-    Constructs a SecBackground object with default coordinates and size.
+        Constructs a SecBackground object with size and position.
     **/
     public SecBackground(){
         x = 0;
@@ -21,9 +38,9 @@ public class SecBackground extends DrawingObject {
     }
 
     /**
-    Draws the background using a linear gradient fill.
-    The background is drawn with a gradient from the top-left to the bottom-right.
-    @param g the Graphics2D object used for drawing
+        Draws the background using a linear gradient fill.
+        The background is drawn with a gradient from the top-left to the bottom-right.
+        @param g the Graphics2D object used for drawing
     **/
     @Override
     public void draw(Graphics2D g){
@@ -41,8 +58,7 @@ public class SecBackground extends DrawingObject {
     }
 
     /**
-    Returns the current Y coordinate of the background.
-    @return the Y coordinate of the background
+        @return the Y coordinate of the background
     **/
     @Override
     public double getY() { 
@@ -50,8 +66,8 @@ public class SecBackground extends DrawingObject {
     }
 
     /**
-    Sets a new Y coordinate for the background.
-    @param newY the new Y coordinate to set
+        Sets a new Y coordinate for the background.
+        @param newY the new Y coordinate to set
     **/
     @Override
     public void setY(double newY) { 
@@ -59,8 +75,7 @@ public class SecBackground extends DrawingObject {
     }
 
     /**
-    Returns the current X coordinate of the background.
-    @return the X coordinate of the background
+        @return the X coordinate of the background
     **/
     @Override
     public double getX(){
@@ -68,8 +83,8 @@ public class SecBackground extends DrawingObject {
     }
 
     /**
-    Sets a new X coordinate for the background.
-    @param newX the new X coordinate to set
+        Sets a new x coordinate for the background.
+        @param newX the new X coordinate to set
     **/
     @Override
     public void setX(double newX){

@@ -1,26 +1,41 @@
+/**
+	The Text class represents a text object that can be drawn onto a canvas.
+
+	@author Lance Arnel G. Camacho (245288)
+    @author John Jerome Pardo (246268)
+	@version March 5, 2025
+	
+	I have not discussed the Java language code in my program 
+	with anyone other than my instructor or the teaching assistants 
+	assigned to this course.
+
+	I have not used Java language code obtained from another student, 
+	or any other unauthorized source, either modified or unmodified.
+
+	If any Java language code or documentation used in my program 
+	was obtained from another source, such as a textbook or website, 
+	that has been clearly noted with a proper citation in the comments 
+	of my program.
+**/
+
 import java.awt.*;
 
-/**
- * The Text class represents a text object that can be drawn onto a canvas. It includes properties for position, 
- * text content, font size, color, and rotation. The text is drawn on a given Graphics2D object.
- */
 public class Text extends DrawingObject {
-    private float x;         // X position of the text
-    private float y;         // Y position of the text
-    private String s;        // The text string to display
-    private int size;        // Font size of the text
-    private Color color;     // Color of the text
-    private double rotation; // Rotation angle for the text
+    private float x;         
+    private float y;         
+    private String s;        
+    private int size;        
+    private Color color;     
+    private double rotation; 
 
     /**
-     * Constructor for creating a Text object with specific position, text, color, size, and rotation.
-     *
-     * @param x       The x-coordinate of the text.
-     * @param y       The y-coordinate of the text.
-     * @param s       The text string.
-     * @param color   The color of the text.
-     * @param size    The font size of the text.
-     * @param rotation The rotation angle of the text (in degrees).
+        Constructor for creating a Text object with specific position, text, color, size, and rotation.
+        @param x  x-coordinate
+        @param y  y-coordinate
+        @param s  string text  
+        @param color color of the text  
+        @param size  size of the text
+     * @param rotation rotation on degrees
      */
     public Text(float x, float y, String s, Color color, int size, double rotation) {
         this.x = x;
@@ -32,18 +47,16 @@ public class Text extends DrawingObject {
     }
 
     /**
-     * Rotates the text by 10 degrees in the clockwise direction.
-     */
+        Rotates the text by 10 degrees in the clockwise direction.
+    **/
     public void rotate() {
         rotation += 10;
     }
 
     /**
-     * Draws the text string on the Graphics2D object, applying the specified rotation, color, and size.
-     * The text is rendered using the "Chalkboard" font in bold style.
-     *
-     * @param g The Graphics2D object used to render the text.
-     */
+        Draws the text string on the Graphics2D object, applying the specified rotation, color, and size.
+        @param g The Graphics2D object used to render the text.
+    **/
     @Override
     public void draw(Graphics2D g) {
         Graphics2D g2d = (Graphics2D) g;

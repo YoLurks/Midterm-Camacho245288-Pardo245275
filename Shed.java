@@ -1,11 +1,26 @@
+/**
+	The Shed class represents a shed structure with elements from different shape classes.
+
+	@author Lance Arnel G. Camacho (245288)
+    @author John Jerome Pardo (246268)
+	@version March 5, 2025
+	
+	I have not discussed the Java language code in my program 
+	with anyone other than my instructor or the teaching assistants 
+	assigned to this course.
+
+	I have not used Java language code obtained from another student, 
+	or any other unauthorized source, either modified or unmodified.
+
+	If any Java language code or documentation used in my program 
+	was obtained from another source, such as a textbook or website, 
+	that has been clearly noted with a proper citation in the comments 
+	of my program.
+**/
+
 import java.awt.*;
 import java.util.ArrayList;
 
-/**
-The Shed class represents a shed structure with various graphical elements.
-It extends the DrawingObject class and contains elements like squares, circles,
-triangles, and lines to represent parts of the shed.
-**/
 public class Shed extends DrawingObject {
     private ArrayList<DrawingObject> elements;
     private double x;
@@ -14,8 +29,7 @@ public class Shed extends DrawingObject {
     private double height;
 
     /**
-    Constructor for the Shed class. It initializes the elements of the shed
-    such as background, body, supports, roof, and other parts.
+        Constructor for the Shed class, initializing the elements. The coordinates and size are the door's, identifying its area for clicking.
     **/
     public Shed(){
         elements = new ArrayList<>();
@@ -108,19 +122,18 @@ public class Shed extends DrawingObject {
     }
 
     /**
-    Checks if the given point (mouseX, mouseY) is inside the boundaries of the shed.
-    
-    @param mouseX The x-coordinate of the point to check.
-    @param mouseY The y-coordinate of the point to check.
-    @return true if the point is inside the shed, false otherwise.
+        Checks if the given point (mouseX, mouseY) is inside the boundaries of the door.
+        @param mouseX The x-coordinate of the pointer
+        @param mouseY The y-coordinate of the pointer
+        @return true if the point is at the door of the shed, false otherwise.
     **/
+
     public boolean containsPoint(int mouseX, int mouseY) {
         return (mouseX >= x && mouseX <= x + width) && (mouseY >= y && mouseY <= y + height);
     }
 
     /**
-    Gets the y-coordinate of the shed.
-    @return the y-coordinate of the shed.
+        @return the y-coordinate of the shed.
     **/
     @Override
     public double getY() {
@@ -128,9 +141,8 @@ public class Shed extends DrawingObject {
     }
 
     /**
-    Sets the y-coordinate of the shed.
-    
-    @param newY The new y-coordinate of the shed.
+        Sets the new y-coordinate of the shed.
+        @param newY The new y-coordinate of the shed's door.
     **/
     @Override
     public void setY(double newY) {
@@ -138,8 +150,7 @@ public class Shed extends DrawingObject {
     }
 
     /**
-    Gets the x-coordinate of the shed.
-    @return the x-coordinate of the shed.
+        @return the x-coordinate of the shed's door.
     **/
     @Override
     public double getX(){
@@ -147,9 +158,8 @@ public class Shed extends DrawingObject {
     }
 
     /**
-    Sets the x-coordinate of the shed.
-    
-    @param newX The new x-coordinate of the shed.
+        Sets the x-coordinate
+        @param newX The new x-coordinate of the shed's door.
     **/
     @Override
     public void setX(double newX){

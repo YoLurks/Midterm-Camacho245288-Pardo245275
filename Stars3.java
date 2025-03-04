@@ -1,11 +1,26 @@
+/**
+	The Stars3 class represents the first set of stars with the biggest size.
+
+	@author Lance Arnel G. Camacho (245288)
+    @author John Jerome Pardo (246268)
+	@version March 5, 2025
+	
+	I have not discussed the Java language code in my program 
+	with anyone other than my instructor or the teaching assistants 
+	assigned to this course.
+
+	I have not used Java language code obtained from another student, 
+	or any other unauthorized source, either modified or unmodified.
+
+	If any Java language code or documentation used in my program 
+	was obtained from another source, such as a textbook or website, 
+	that has been clearly noted with a proper citation in the comments 
+	of my program.
+**/
+
 import java.awt.*;
 import java.util.ArrayList;
 
-/**
- * The Stars3 class represents a collection of even larger star shapes that can be drawn.
- * This class extends the DrawingObject class and uses the Star class to create individual star objects.
- * These stars are bigger than those in the Stars and Stars2 classes, enhancing the scene's visual effect.
- */
 public class Stars3 extends DrawingObject {
     private ArrayList<DrawingObject> elements;
     private double x, y;
@@ -16,7 +31,6 @@ public class Stars3 extends DrawingObject {
      */
     public Stars3() {
         elements = new ArrayList<>();
-        // Adding even larger stars with specific positions, sizes, and colors
         elements.add(new Star(26.9, 120, 30, 30, Color.WHITE)); // First larger star
         elements.add(new Star(724.8, 145, 40, 40, Color.WHITE)); // Second larger star
         elements.add(new Star(600.5, 295, 40, 40, Color.WHITE)); // Third larger star
@@ -24,19 +38,11 @@ public class Stars3 extends DrawingObject {
 
     /**
      * Draws all the stars contained in the `elements` list on the given Graphics2D object.
-     * It enables anti-aliasing for smoother rendering of the stars.
-     *
      * @param g The Graphics2D object used for drawing the stars.
      */
     @Override
     public void draw(Graphics2D g) {
         Graphics2D g2d = (Graphics2D) g;
-        
-        // Enabling anti-aliasing for smoother rendering
-        RenderingHints rh = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        g2d.setRenderingHints(rh);
-        
-        // Drawing each star in the `elements` list
         for (DrawingObject obj : elements) {
             obj.draw(g2d);
         }

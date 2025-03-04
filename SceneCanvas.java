@@ -1,3 +1,23 @@
+/**
+	SceneCanvas is the main component that handles all the elements and displays it as a 'canvas'.
+
+	@author Lance Arnel G. Camacho (245288)
+    @author John Jerome Pardo (246268)
+	@version March 5, 2025
+	
+	I have not discussed the Java language code in my program 
+	with anyone other than my instructor or the teaching assistants 
+	assigned to this course.
+
+	I have not used Java language code obtained from another student, 
+	or any other unauthorized source, either modified or unmodified.
+
+	If any Java language code or documentation used in my program 
+	was obtained from another source, such as a textbook or website, 
+	that has been clearly noted with a proper citation in the comments 
+	of my program.
+**/
+
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
@@ -6,9 +26,6 @@ import javax.sound.sampled.*;
 import javax.swing.*;
 import java.util.ArrayList;
 
-/**
-SceneCanvas is the main component that handles all the elements and includes it on its 'canvas'.
-**/
 public class SceneCanvas extends JComponent {
     private ArrayList<DrawingObject> objects; 
     private Shed shed;  
@@ -230,18 +247,31 @@ public class SceneCanvas extends JComponent {
     }
 
     /**
-    Paints the components on the canvas.
-    @param g the graphics object used for rendering the components
+        Paints the components on the canvas.
+        @param g the graphics object used for rendering the components
     **/
-    @Override
+
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-
+        
         Graphics2D g2d = (Graphics2D) g;
         changeShed();
         for (DrawingObject obj : objects) {
             obj.draw(g2d);
         }
+    }
+
+    /**
+        Graphics2D in charge of the anti-aliasing.
+        @param g the graphics object used for rendering the components
+    **/
+
+    protected void paintComponent(Graphics2D g) {
+        super.paintComponent(g);
+        RenderingHints rh = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        g.setRenderingHints(rh);
+        
+        
     }
 
     /**

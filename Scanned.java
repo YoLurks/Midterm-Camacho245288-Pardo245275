@@ -1,9 +1,26 @@
+/**
+	The Scanned class represents an invisible object (transparent) that will be the tracker that starts the stars animation.
+
+	@author Lance Arnel G. Camacho (245288)
+    @author John Jerome Pardo (246268)
+	@version March 5, 2025
+	
+	I have not discussed the Java language code in my program 
+	with anyone other than my instructor or the teaching assistants 
+	assigned to this course.
+
+	I have not used Java language code obtained from another student, 
+	or any other unauthorized source, either modified or unmodified.
+
+	If any Java language code or documentation used in my program 
+	was obtained from another source, such as a textbook or website, 
+	that has been clearly noted with a proper citation in the comments 
+	of my program.
+**/
+
 import java.awt.*;
 import java.util.ArrayList;
 
-/**
-    The Scanned class represents an invisible object (transparent) that will be the tracker that starts the stars animation.
-**/
 public class Scanned extends DrawingObject {
     private ArrayList<DrawingObject> elements; 
     private double y; 

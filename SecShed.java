@@ -1,3 +1,23 @@
+/**
+	The SecShed is used as the next Shed once the animation starts.
+
+	@author Lance Arnel G. Camacho (245288)
+    @author John Jerome Pardo (246268)
+	@version March 5, 2025
+	
+	I have not discussed the Java language code in my program 
+	with anyone other than my instructor or the teaching assistants 
+	assigned to this course.
+
+	I have not used Java language code obtained from another student, 
+	or any other unauthorized source, either modified or unmodified.
+
+	If any Java language code or documentation used in my program 
+	was obtained from another source, such as a textbook or website, 
+	that has been clearly noted with a proper citation in the comments 
+	of my program.
+**/
+
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -10,7 +30,7 @@ public class SecShed extends DrawingObject {
     private static Triangle partyTraingleRight;
 
     /**
-    Constructs a new SecShed object, initializing all the objects.
+        Constructs a new SecShed object, initializing all the objects.
     **/
     public SecShed(){
         elements = new ArrayList<>();
@@ -105,9 +125,9 @@ public class SecShed extends DrawingObject {
     }
 
     /**
-     * Draws all elements of the shed by calling their individual draw methods through the array.
-     * @param g the Graphics2D object used to render the drawing.
-     */
+        Draws all elements of the shed by calling their individual draw methods through the array.
+        @param g the Graphics2D object used to render the drawing.
+    **/
     @Override
     public void draw(Graphics2D g) {
         Graphics2D g2d = (Graphics2D) g;
@@ -127,16 +147,16 @@ public class SecShed extends DrawingObject {
     }
     
     /**
-     * Sets the Y coordinate and replaces with parameter.
-     * @param newY the new y coordinate.
-     */
+        Sets the Y coordinate and replaces with parameter.
+        @param newY the new y coordinate.
+    **/
     @Override
     public void setY(double newY) { 
         this.y = newY; 
     }
 
     /**
-    @return the X coordinate of the shed
+        @return the X coordinate of the shed
     **/
     @Override
     public double getX(){
@@ -144,8 +164,8 @@ public class SecShed extends DrawingObject {
     }
 
     /**
-    Sets the X coordinate to the parameter.
-    @param newX the new x coordinate to set
+        Sets the X coordinate to the parameter.
+        @param newX the new x coordinate to set
     **/
     @Override
     public void setX(double newX){
@@ -153,14 +173,14 @@ public class SecShed extends DrawingObject {
     }
 
     /**
-    @return the left party triangle
+        @return the left party triangle
     **/
     public static Triangle getPartyTraingleLeft(){
         return partyTraingleLeft;
     }
 
     /**
-    @return the right party triangle
+        @return the right party triangle
     **/
     public static Triangle getPartyTraingleRight(){
         return partyTraingleRight;

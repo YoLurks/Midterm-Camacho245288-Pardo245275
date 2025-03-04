@@ -1,3 +1,23 @@
+/**
+	The Vines class represents the vines connecting to the shed, used by elements like Line and Triangle classes.
+
+	@author Lance Arnel G. Camacho (245288)
+    @author John Jerome Pardo (246268)
+	@version March 5, 2025
+	
+	I have not discussed the Java language code in my program 
+	with anyone other than my instructor or the teaching assistants 
+	assigned to this course.
+
+	I have not used Java language code obtained from another student, 
+	or any other unauthorized source, either modified or unmodified.
+
+	If any Java language code or documentation used in my program 
+	was obtained from another source, such as a textbook or website, 
+	that has been clearly noted with a proper citation in the comments 
+	of my program.
+**/
+
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -7,8 +27,8 @@ public class Vines extends DrawingObject {
     private double x;
 
     /**
-     * Constructor to initialize the vines with various drawing objects.
-     */
+        Constructor to initialize the vines with various drawing objects, like triangle and line classes.
+    **/
     public Vines(){
         elements = new ArrayList<>();
         elements.add(new Line(305.9,232.3,958.6,186,new Color(123,175,101), 1));
@@ -41,10 +61,9 @@ public class Vines extends DrawingObject {
     }
 
     /**
-     * Draws all the elements (lines and triangles) of the vines.
-     * 
-     * @param g the Graphics2D context to draw on.
-     */
+        Draws all the elements (lines and triangles) of the vines.
+        @param g the Graphics2D context to draw on.
+    **/
     @Override
     public void draw(Graphics2D g) {
         Graphics2D g2d = (Graphics2D) g;
@@ -54,40 +73,34 @@ public class Vines extends DrawingObject {
     }
 
     /**
-     * Returns the y-coordinate of the vines.
-     * 
-     * @return the y-coordinate of the vines.
-     */
+        @return the y-coordinate of the vines.
+    **/
     @Override
     public double getY() { 
         return y;
     }
     
     /**
-     * Sets the y-coordinate of the vines.
-     * 
-     * @param newY the new y-coordinate of the vines.
-     */
+        Sets the y-coordinate of the vines.
+        @param newY the new y-coordinate of the vines.
+    **/
     @Override
     public void setY(double newY) { 
         this.y = newY; 
     }
 
     /**
-     * Returns the x-coordinate of the vines.
-     * 
-     * @return the x-coordinate of the vines.
-     */
+        @return the x-coordinate of the vines.
+    **/
     @Override
     public double getX(){
         return x;
     }
 
     /**
-     * Sets the x-coordinate of the vines.
-     * 
-     * @param newX the new x-coordinate of the vines.
-     */
+        Sets the x-coordinate of the vines.
+        @param newX the new x-coordinate of the vines.
+    **/
     @Override
     public void setX(double newX){
         this.x = newX;
