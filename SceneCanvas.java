@@ -169,20 +169,20 @@ public class SceneCanvas extends JComponent {
             public void actionPerformed(ActionEvent e) {
                 // Cycle through different colors
                 if (counter == 0) {
-                    placeColor = new Color(138, 71, 71, 80);
-                    newPlaceColor = new Color(74, 138, 71, 80);
+                    placeColor = new Color(138, 71, 71, 150);
+                    newPlaceColor = new Color(74, 138, 71, 150);
                 } else if (counter == 1) {
-                    placeColor = new Color(71, 112, 138, 80);
-                    newPlaceColor = new Color(115, 71, 138, 80);
+                    placeColor = new Color(71, 112, 138, 150);
+                    newPlaceColor = new Color(115, 71, 138, 150);
                 } else if (counter == 2) {
-                    placeColor = new Color(74, 138, 71, 80);
-                    newPlaceColor = new Color(138, 131, 71, 80);
+                    placeColor = new Color(74, 138, 71, 150);
+                    newPlaceColor = new Color(138, 131, 71, 150);
                 } else if (counter == 3) {
-                    placeColor = new Color(138, 131, 71, 80);
-                    newPlaceColor = new Color(71, 112, 138, 80);
+                    placeColor = new Color(138, 131, 71, 150);
+                    newPlaceColor = new Color(71, 112, 138, 150);
                 } else if (counter == 4) {
-                    placeColor = new Color(115, 71, 138, 80);
-                    newPlaceColor = new Color(138, 71, 71, 80);
+                    placeColor = new Color(115, 71, 138, 150);
+                    newPlaceColor = new Color(138, 71, 71, 150);
                     counter = -1;
                 }
                 counter++;
