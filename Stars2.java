@@ -1,5 +1,6 @@
 /**
 	The Stars2 class represents the first set of stars with a bigger size.
+    It is where the star has a different value for an animatiom.
 
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

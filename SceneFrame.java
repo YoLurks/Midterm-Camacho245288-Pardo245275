@@ -1,5 +1,6 @@
 /**
-	SceneFrame is the main window for the animated scene.
+	SceneFrame is the main window for the animated scene. It will be used 
+    when the SceneStarter will call it to display the graphics.
 
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

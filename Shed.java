@@ -1,5 +1,6 @@
 /**
 	The Shed class represents a shed structure with elements from different shape classes.
+    It uses Rectangles, Circles, Lines, and Triangles to create the complex shape.
 
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

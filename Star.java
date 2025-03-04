@@ -1,6 +1,7 @@
 /**
 	The Star class is a shape class used to represent the stars in the sky.
-
+    It uses path to create the different points for a star.
+    
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)
 	@version March 5, 2025

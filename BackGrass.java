@@ -1,8 +1,9 @@
 /**
-	The BackGrass class represents the grass portion behind the road.
+	The BackGrass class represents the grass portion behind the road. It 
+    included an array of circles and triangles.
 	
 	@author Lance Arnel G. Camacho (245288)
-    @author John Jerome Pardo (246268)
+    @author John Jerome C. Pardo (246268)
 	@version March 5, 2025
 	
 	I have not discussed the Java language code in my program 

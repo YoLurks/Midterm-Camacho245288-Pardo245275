@@ -1,5 +1,6 @@
 /**
     The DrawingObject class is an abstract base class for objects that can be drawn.
+    It is where the other classes use it as a template.
 	
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

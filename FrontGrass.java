@@ -1,5 +1,6 @@
 /**
 	The FrontGrass class represents the grass portion in front of the scene with multiple elements.
+    It included an array of circles and triangles to draw the grass.
 
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

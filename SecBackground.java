@@ -1,5 +1,6 @@
 /**
 	The SecBackground is used as the next background once the first background leaves through a Timer.
+    It uses a LinearGradient that shows a different backrgoundColor.
 
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

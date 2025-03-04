@@ -1,5 +1,6 @@
 /**
-	The SceneStarter class is the entry point that will start the animation.
+	The SceneStarter class is the entry point that will start the animation. 
+    It is where the code will be executed to show the graphics.
 
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

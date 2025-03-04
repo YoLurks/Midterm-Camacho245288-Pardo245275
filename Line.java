@@ -1,5 +1,6 @@
 /**
 	The Line class represents a line object with specified start and end points, color, and thickness.
+    It is used to make the lines for the shed,vines, sign, and the flowers.
 
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

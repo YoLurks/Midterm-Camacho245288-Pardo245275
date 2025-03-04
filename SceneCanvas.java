@@ -1,5 +1,6 @@
 /**
 	SceneCanvas is the main component that handles all the elements and displays it as a 'canvas'.
+    It is where all of the classes are put together to call it in the SceneFrame.
 
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

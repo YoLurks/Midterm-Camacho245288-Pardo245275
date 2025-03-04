@@ -1,5 +1,6 @@
 /**
 	The Sign class represents the sign that will signify what to click/knock on.
+    It is a visual aid for the user to know how to start the animation.
 
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

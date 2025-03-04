@@ -1,5 +1,6 @@
 /**
 	The Vines class represents the vines connecting to the shed, used by elements like Line and Triangle classes.
+    It uses lines and triangles to draw it.
 
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

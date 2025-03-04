@@ -1,5 +1,6 @@
 /**
 	The Triangle class represents an additional shape class that will be used in different classes.
+    It is used in other classes to create complex shapes (example: mountains and shed).
 
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

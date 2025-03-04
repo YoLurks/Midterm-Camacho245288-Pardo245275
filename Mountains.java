@@ -1,5 +1,6 @@
 /**
 	The Mountains class is used to draw the mountains in the background from shape classes.
+    It uses triangles to create the mountains.
 
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

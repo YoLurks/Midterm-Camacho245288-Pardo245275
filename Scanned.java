@@ -1,5 +1,6 @@
 /**
 	The Scanned class represents an invisible object (transparent) that will be the tracker that starts the stars animation.
+    It is used to make the animation more organized in the way it is called.
 
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

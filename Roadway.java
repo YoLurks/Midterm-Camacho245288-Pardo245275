@@ -1,5 +1,6 @@
 /**
 	The Roadway class represents the road between the grass, using circle classes.
+    It is made up of circles.
 
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

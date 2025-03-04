@@ -1,5 +1,6 @@
 /**
 	The Circle class represents a base circle shape that is used by other classes to draw.
+    It used in many other composite shapes like trees, background, and many more. 
 	
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

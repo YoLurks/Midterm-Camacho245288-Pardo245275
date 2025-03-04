@@ -1,5 +1,6 @@
 /**
 	The Trees class represents a drawing of multiple tree elements such as trunks, branches, and foliage.
+    It creates more depth to the first background.
 
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

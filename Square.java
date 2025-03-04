@@ -1,5 +1,6 @@
 /**
 	The Square class represents a rectangle (or square) shape that can be drawn.
+    It is used in multiple classes that makes complex shapes. 
 
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

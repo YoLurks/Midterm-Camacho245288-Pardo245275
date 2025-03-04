@@ -1,5 +1,6 @@
 /**
 	The Text class represents a text object that can be drawn onto a canvas.
+    It is a text that has a fixed font family but allows different values like color and size.
 
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

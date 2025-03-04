@@ -1,5 +1,6 @@
 /**
 	The TextTitle class represents the title "ACCIDENTALLY IN LOVE" consisting of multiple Text objects.
+    It is where the title is drawn.
 
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

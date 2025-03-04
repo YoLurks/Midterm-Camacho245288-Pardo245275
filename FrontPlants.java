@@ -1,5 +1,6 @@
 /**
 	The FrontPlants class represents a collection of fixed stems and swaying flowers.
+    This represents the plants that are made up of lines and circles.
 
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

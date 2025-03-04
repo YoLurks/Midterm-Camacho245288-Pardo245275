@@ -1,5 +1,6 @@
 /**
 	The BackPlants class represents the plants on the grass behind the road.
+    This represents the plants that are made up of lines and circles.
 	
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)

@@ -1,5 +1,6 @@
 /**
 	The Stars4 class represents the second set of stars with the smallest size.
+    It is where the star has a different value for an animatiom.
 
 	@author Lance Arnel G. Camacho (245288)
     @author John Jerome C. Pardo (246268)
