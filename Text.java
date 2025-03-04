@@ -2,7 +2,7 @@
 	The Text class represents a text object that can be drawn onto a canvas.
 
 	@author Lance Arnel G. Camacho (245288)
-    @author John Jerome Pardo (246268)
+    @author John Jerome C. Pardo (246268)
 	@version March 5, 2025
 	
 	I have not discussed the Java language code in my program 
