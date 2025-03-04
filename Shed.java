@@ -1,6 +1,11 @@
 import java.awt.*;
 import java.util.ArrayList;
 
+/**
+The Shed class represents a shed structure with various graphical elements.
+It extends the DrawingObject class and contains elements like squares, circles,
+triangles, and lines to represent parts of the shed.
+**/
 public class Shed extends DrawingObject {
     private ArrayList<DrawingObject> elements;
     private double x;
@@ -8,15 +13,18 @@ public class Shed extends DrawingObject {
     private double width;
     private double height;
 
+    /**
+    Constructor for the Shed class. It initializes the elements of the shed
+    such as background, body, supports, roof, and other parts.
+    **/
     public Shed(){
-
         elements = new ArrayList<>();
         x = 147;
         y = 250;
         width = 145;
         height = 210;
 
-        //shed background
+        // Shed background
         elements.add(new Square(90.8,205.5,40.5,304.5,new Color(124,115,95), 0));
         elements.add(new Square(96.7,218.3,162.5,278.9,new Color(140,128,104), 0));
         elements.add(new Square(123.9,205.5,178.3,42.5,new Color(155,140,110), 0));
@@ -28,7 +36,7 @@ public class Shed extends DrawingObject {
         elements.add(new Triangle(229.6,205.2,32.2,28.2,new Color(70,79,66), 0));
         elements.add(new Triangle(261.2,219.4,12.8,11.2,new Color(70,79,66), 0));
 
-        // shed body
+        // Shed body
         elements.add(new Square(108.4,256.2,182.4,235.7,new Color(155,140,110), -7.8));
         elements.add(new Triangle(199.6,267.8,32.2,28.2,new Color(70,79,66), 171.7));
         elements.add(new Triangle(219.3,264.1,32.2,28.2,new Color(70,79,66), 171.7));
@@ -52,13 +60,13 @@ public class Shed extends DrawingObject {
         elements.add(new Circle(197,279.4,45.6,41.2,new Color(70,79,66),0));
         elements.add(new Circle(207.8,283.1,36.6,33.8,new Color(155,140,110),0));
 
-        //shed supports
+        // Shed supports
         elements.add(new Square(294.7,180.9,18.8,289.8,new Color(167,151,119), 0));
         elements.add(new Square(111.8,212.9,37.5,304.5,new Color(167,151,119), 0));
         elements.add(new Square(255.6,206.7,13.3,56,new Color(167,151,119), -56.2));
         elements.add(new Square(256.1,188.5,13.3,18.3,new Color(167,151,119), 0));
 
-        //shed support rope
+        // Shed support rope
         elements.add(new Square(255.2, 206.9, 19.1, 3.1, new Color(192, 179, 153), -28.9));
         elements.add(new Square(289.6, 263.1, 29, 3.1, new Color(192, 179, 153), -28.9));
         elements.add(new Square(290.8, 286.3, 29, 3.1, new Color(192, 179, 153), 0));
@@ -74,9 +82,9 @@ public class Shed extends DrawingObject {
         elements.add(new Square(110.5, 385.3, 40, 3.1, new Color(192, 179, 153), 0));
         elements.add(new Square(110.5, 390.3, 40, 3.1, new Color(192, 179, 153), 0));
 
-        //shed roof
+        // Shed roof
         elements.add(new Square(61.3, 214.1, 296.1, 14.8, new Color(136, 124, 100), -9.3));
-        elements.add(new Square(61.3, 213.7, 50.9, 15.2, new Color(109, 102, 90), -9.3));
+        elements.add(new Square(61.3, 213.7, 50.9, 15.2, new Color(109,102,90), -9.3));
         elements.add(new Square(78.3, 207.9, 276.8, 3.6, new Color(126, 217, 87), -9.3));
         elements.add(new Triangle(127.6, 224.3, 26.6, 23.2, new Color(126, 217, 87), 170.6));
         elements.add(new Triangle(133.4, 215.3, 18.4, 16.1, new Color(126, 217, 87), 170.6));
@@ -84,34 +92,65 @@ public class Shed extends DrawingObject {
         elements.add(new Triangle(357.2, 186.8, 26.6, 23.2, new Color(126, 217, 87), 170.6));
     }
 
-     @Override
+    /**
+    Draws the Shed object on the given Graphics2D context.
+    
+    @param g The Graphics2D object used for drawing the shed.
+    **/
+    @Override
     public void draw(Graphics2D g) {
-    Graphics2D g2d = (Graphics2D) g;
-    for (DrawingObject obj : elements) {
-        Graphics2D g2dC = (Graphics2D) g2d.create();
-        obj.draw(g2dC);
-        g2dC.dispose();
+        Graphics2D g2d = (Graphics2D) g;
+        for (DrawingObject obj : elements) {
+            Graphics2D g2dC = (Graphics2D) g2d.create();
+            obj.draw(g2dC);
+            g2dC.dispose();
+        }
     }
-    }
+
+    /**
+    Checks if the given point (mouseX, mouseY) is inside the boundaries of the shed.
+    
+    @param mouseX The x-coordinate of the point to check.
+    @param mouseY The y-coordinate of the point to check.
+    @return true if the point is inside the shed, false otherwise.
+    **/
     public boolean containsPoint(int mouseX, int mouseY) {
         return (mouseX >= x && mouseX <= x + width) && (mouseY >= y && mouseY <= y + height);
     }
 
-        @Override
-    public double getY() { 
-    return y;
+    /**
+    Gets the y-coordinate of the shed.
+    @return the y-coordinate of the shed.
+    **/
+    @Override
+    public double getY() {
+        return y;
     }
 
-    @Override
-    public void setY(double newY) { 
-        this.y = newY; 
-    }
+    /**
+    Sets the y-coordinate of the shed.
     
+    @param newY The new y-coordinate of the shed.
+    **/
+    @Override
+    public void setY(double newY) {
+        this.y = newY;
+    }
+
+    /**
+    Gets the x-coordinate of the shed.
+    @return the x-coordinate of the shed.
+    **/
     @Override
     public double getX(){
         return x;
     }
 
+    /**
+    Sets the x-coordinate of the shed.
+    
+    @param newX The new x-coordinate of the shed.
+    **/
     @Override
     public void setX(double newX){
         this.x = newX;

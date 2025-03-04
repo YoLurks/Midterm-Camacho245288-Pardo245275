@@ -1,10 +1,18 @@
+
 import java.awt.*;
 import java.util.ArrayList;
+
+/**
+    The BackGrass class represents the grass portion behind the road.
+**/
 public class BackGrass extends DrawingObject {
     private ArrayList<DrawingObject> elements;
     private double y;
     private double x;
     
+    /**
+        Instantiates the array list elements and adds the shape elements for the grass.
+    **/
     public BackGrass(){
         elements = new ArrayList<>();
         elements.add(new Circle(60.4,451.4,659.4,282.5,new Color(126,217,87), 0));
@@ -22,30 +30,46 @@ public class BackGrass extends DrawingObject {
         elements.add(new Triangle(703,440.2,64.4,56.3,new Color(126,217,87), 0));
     }
 
+    /**
+        Draws the BackGrass object and its elements using the provided Graphics2D object.
+    **/
     @Override
-        public void draw(Graphics2D g) {
+    public void draw(Graphics2D g) {
         Graphics2D g2d = (Graphics2D) g;
-        RenderingHints rh = new RenderingHints(RenderingHints.KEY_ANTIALIASING,RenderingHints.VALUE_ANTIALIAS_ON);
+        RenderingHints rh = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g2d.setRenderingHints(rh);
         for (DrawingObject obj : elements) {
             obj.draw(g2d);
         }
     }
+
+    /**
+        Returns the current Y-coordinate of the BackGrass object.
+    **/
     @Override
     public double getY() { 
         return y;
     }
-    
+
+    /**
+        Sets the Y-coordinate of the BackGrass object.
+    **/
     @Override
     public void setY(double newY) { 
         this.y = newY; 
     }
 
+    /**
+        Returns the current X-coordinate of the BackGrass object.
+    **/
     @Override
     public double getX(){
         return x;
     }
 
+    /**
+        Sets the X-coordinate of the BackGrass object.
+    **/
     public void setX(double newX){
         this.x = newX;
     }

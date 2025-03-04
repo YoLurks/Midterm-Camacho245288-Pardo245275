@@ -1,6 +1,10 @@
 import java.awt.*;
 import java.awt.geom.*;
 
+/**
+ * The Star class represents a star shape that can be drawn with a specified size and color.
+ * It extends the DrawingObject class and provides functionality to draw the star shape on a Graphics2D object.
+ */
 public class Star extends DrawingObject {
     private double x;
     private double y;
@@ -8,6 +12,15 @@ public class Star extends DrawingObject {
     private double h;
     private Color color;
 
+    /**
+     * Constructor for the Star class. Initializes the position, size, and color of the star.
+     *
+     * @param x The x-coordinate of the top-left corner of the bounding box for the star.
+     * @param y The y-coordinate of the top-left corner of the bounding box for the star.
+     * @param w The width of the bounding box for the star.
+     * @param h The height of the bounding box for the star.
+     * @param color The color of the star.
+     */
     public Star(double x, double y, double w, double h, Color color) {
         this.x = x;
         this.y = y;
@@ -16,15 +29,23 @@ public class Star extends DrawingObject {
         this.color = color;
     }
 
+    /**
+     * Draws the star on the given Graphics2D object. 
+     * The star is created by connecting multiple points calculated based on the x, y, width, and height values.
+     *
+     * @param g The Graphics2D object used for drawing the star.
+     */
     @Override
     public void draw(Graphics2D g) {
         Path2D star = new Path2D.Double();
 
-        //middle upper
+        // Coordinates for the points of the star based on the bounding box (x, y, w, h)
+        
+        // Middle upper point
         double x1 = x + w / 2;
         double y1 = y;
 
-        //left side
+        // Left side
         double x2 = x + w / 4;
         double y2 = y + h / 4;
 
@@ -33,16 +54,16 @@ public class Star extends DrawingObject {
 
         double x4 = x2;
         double y4 = y + h / 2;
-        
+
         double x5 = x;
         double y5 = y + h * 7/8;
 
-        //middle lower
+        // Middle lower point
         double x6 = x1;
         double h75 = h * 3/4;
         double y6 = y + h75;
-        
-        //right side 
+
+        // Right side
         double x7 = x + w;
         double y7 = y + h * 7/8;
 
@@ -51,12 +72,12 @@ public class Star extends DrawingObject {
         double y8 = y4;
 
         double x9 = x + w;
-        double y9 = y + h /4;
-        
+        double y9 = y + h / 4;
+
         double x10 = x8;
         double y10 = y9;
-        
-        // the ten points that are very skibidi
+
+        // Connect the points to form the star
         star.moveTo(x1, y1);
         star.lineTo(x2, y2);
         star.lineTo(x3, y3);
@@ -69,25 +90,47 @@ public class Star extends DrawingObject {
         star.lineTo(x10, y10);
 
         star.closePath();
+        
+        // Set the color and fill the star
         g.setColor(color);
         g.fill(star);
     }
 
-     @Override
+    /**
+     * Gets the current y-coordinate of the star.
+     *
+     * @return The y-coordinate of the star.
+     */
+    @Override
     public double getY() { 
         return y;
     }
     
+    /**
+     * Sets a new y-coordinate for the star.
+     *
+     * @param newY The new y-coordinate to set.
+     */
     @Override
     public void setY(double newY) { 
         this.y = newY; 
     }
 
+    /**
+     * Gets the current x-coordinate of the star.
+     *
+     * @return The x-coordinate of the star.
+     */
     @Override
     public double getX(){
         return x;
     }
 
+    /**
+     * Sets a new x-coordinate for the star.
+     *
+     * @param newX The new x-coordinate to set.
+     */
     @Override
     public void setX(double newX){
         this.x = newX;

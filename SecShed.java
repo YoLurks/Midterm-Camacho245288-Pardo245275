@@ -9,6 +9,9 @@ public class SecShed extends DrawingObject {
     private static Triangle partyTraingleLeft;
     private static Triangle partyTraingleRight;
 
+    /**
+    Constructs a new SecShed object, initializing all the objects.
+    **/
     public SecShed(){
         elements = new ArrayList<>();
 
@@ -16,7 +19,7 @@ public class SecShed extends DrawingObject {
         partyTraingleRight = new Triangle(366.8,242, 492.1, 209.2, new Color(82, 113,255, 0), 91.5);
         partyCircle = new Circle(131.1,271,180,279.3,new Color(58,67,54),0);
 
-        //shed background
+        // shed background
         elements.add(new Square(90.8,205.5,40.5,304.5,new Color(124,115,95), 0));
         elements.add(new Square(96.7,218.3,162.5,278.9,new Color(140,128,104), 0));
         elements.add(new Square(123.9,205.5,178.3,42.5,new Color(155,140,110), 0));
@@ -55,14 +58,14 @@ public class SecShed extends DrawingObject {
         elements.add(partyTraingleRight);
         // elements.add(partyCircle);
 
-        //shed supports
+        // shed supports
         elements.add(new Square(294.7,180.9,18.8,289.8,new Color(167,151,119), 0));
         elements.add(new Square(111.8,212.9,37.5,304.5,new Color(167,151,119), 0));
         elements.add(new Square(255.6,206.7,13.3,56,new Color(167,151,119), -56.2));
         elements.add(new Square(256.1,188.5,13.3,18.3,new Color(167,151,119), 0));
         
 
-        //shed support rope
+        // shed support rope
         elements.add(new Square(255.2, 206.9, 19.1, 3.1, new Color(192, 179, 153), -28.9));
         elements.add(new Square(289.6, 263.1, 29, 3.1, new Color(192, 179, 153), -28.9));
         elements.add(new Square(290.8, 286.3, 29, 3.1, new Color(192, 179, 153), 0));
@@ -78,7 +81,7 @@ public class SecShed extends DrawingObject {
         elements.add(new Square(110.5, 385.3, 40, 3.1, new Color(192, 179, 153), 0));
         elements.add(new Square(110.5, 390.3, 40, 3.1, new Color(192, 179, 153), 0));
         
-        //shed roof
+        // shed roof
         elements.add(new Square(61.3, 214.1, 296.1, 14.8, new Color(136, 124, 100), -9.3));
         elements.add(new Square(61.3, 213.7, 50.9, 15.2, new Color(109, 102, 90), -9.3));
         elements.add(new Square(78.3, 207.9, 276.8, 3.6, new Color(126, 217, 87), -9.3));
@@ -88,7 +91,7 @@ public class SecShed extends DrawingObject {
         elements.add(new Triangle(336.8, 189.3, 26.6, 23.2, new Color(126, 217, 87), 170.6));
         
 
-        //shed outer door
+        // shed outer door
         elements.add(new Square(286.5, 228, 64.2, 235.7, new Color(155, 140, 110), 0));
         elements.add(new Line(304.8,227.5,305.6,250.4,new Color(70,79,66), 3));
         elements.add(new Line(305.3,353.3,305.3,462.8,new Color(70,79,66), 3));
@@ -99,46 +102,66 @@ public class SecShed extends DrawingObject {
         elements.add(new Circle(302.1,280.7,38.5,38.5,new Color(70,79,66),0));
         elements.add(new Circle(296.6,282.7,34.5,34.5,new Color(155,140,110),0));
         elements.add(new Triangle(339.8, 254.6, 13.7, 28.2, new Color(67,127,82), -180));
-
-        // elements.add(new Triangle(311.1, 435, 32.2, 28.2, new Color(126,217,87), 0));
-        // elements.add(new Triangle(337.4, 448, 17.4, 15.2, new Color(126,217,87), 0));
-        // elements.add(new Triangle(303.1, 441.4, 17.7, 22.2, new Color(126,217,87), 0));
     }
 
-     @Override
-        public void draw(Graphics2D g) {
+    /**
+     * Draws all elements of the shed by calling their individual draw methods through the array.
+     * @param g the Graphics2D object used to render the drawing.
+     */
+    @Override
+    public void draw(Graphics2D g) {
         Graphics2D g2d = (Graphics2D) g;
         for (DrawingObject obj : elements) {
             Graphics2D g2dC = (Graphics2D) g2d.create();
             obj.draw(g2dC);
             g2dC.dispose();
         }
-        }
-     @Override
+    }
+
+    /**
+    @return the Y coordinate of the shed
+    **/
+    @Override
     public double getY() { 
         return y;
     }
     
+    /**
+     * Sets the Y coordinate and replaces with parameter.
+     * @param newY the new y coordinate.
+     */
     @Override
     public void setY(double newY) { 
         this.y = newY; 
     }
 
+    /**
+    @return the X coordinate of the shed
+    **/
     @Override
     public double getX(){
         return x;
     }
 
+    /**
+    Sets the X coordinate to the parameter.
+    @param newX the new x coordinate to set
+    **/
     @Override
     public void setX(double newX){
         this.x = newX;
     }
-        
 
+    /**
+    @return the left party triangle
+    **/
     public static Triangle getPartyTraingleLeft(){
         return partyTraingleLeft;
     }
 
+    /**
+    @return the right party triangle
+    **/
     public static Triangle getPartyTraingleRight(){
         return partyTraingleRight;
     }

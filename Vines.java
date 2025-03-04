@@ -1,9 +1,14 @@
 import java.awt.*;
 import java.util.ArrayList;
+
 public class Vines extends DrawingObject {
     private ArrayList<DrawingObject> elements;
     private double y;
     private double x;
+
+    /**
+     * Constructor to initialize the vines with various drawing objects.
+     */
     public Vines(){
         elements = new ArrayList<>();
         elements.add(new Line(305.9,232.3,958.6,186,new Color(123,175,101), 1));
@@ -33,34 +38,58 @@ public class Vines extends DrawingObject {
         elements.add(new Triangle(550.8,404.9,13.5,11.8,new Color(99,145,79),153));
         elements.add(new Triangle(633.4,357.6,10.5,9.3,new Color(99,145,79),153));
         elements.add(new Triangle(654.3,346.7,10.5,9.3,new Color(99,145,79),153));
-
     }
 
+    /**
+     * Draws all the elements (lines and triangles) of the vines.
+     * 
+     * @param g the Graphics2D context to draw on.
+     */
     @Override
     public void draw(Graphics2D g) {
-    Graphics2D g2d = (Graphics2D) g;
-    for (DrawingObject obj : elements) {
-        obj.draw(g2d);
+        Graphics2D g2d = (Graphics2D) g;
+        for (DrawingObject obj : elements) {
+            obj.draw(g2d);
+        }
     }
-}
-     @Override
+
+    /**
+     * Returns the y-coordinate of the vines.
+     * 
+     * @return the y-coordinate of the vines.
+     */
+    @Override
     public double getY() { 
         return y;
     }
     
+    /**
+     * Sets the y-coordinate of the vines.
+     * 
+     * @param newY the new y-coordinate of the vines.
+     */
     @Override
     public void setY(double newY) { 
         this.y = newY; 
     }
 
+    /**
+     * Returns the x-coordinate of the vines.
+     * 
+     * @return the x-coordinate of the vines.
+     */
     @Override
     public double getX(){
         return x;
     }
 
+    /**
+     * Sets the x-coordinate of the vines.
+     * 
+     * @param newX the new x-coordinate of the vines.
+     */
     @Override
     public void setX(double newX){
         this.x = newX;
     }
-
 }

@@ -2,12 +2,18 @@ import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.util.ArrayList;
 
+/**
+    The BackPlants class represents the plants on the BackGrass class
+**/
 public class BackPlants extends DrawingObject {
     private ArrayList<DrawingObject> lines;   
     private ArrayList<Circle> circles;        
     private double swayOffset; 
     private double swayAngle; 
 
+    /**
+        Initializes the BackPlants with the line and circle objects
+    **/
     public BackPlants() {
         lines = new ArrayList<>();
         circles = new ArrayList<>();
@@ -30,6 +36,10 @@ public class BackPlants extends DrawingObject {
         swayAngle = 0;
     }
 
+    /**
+        Draws the lines and circles for the background plants, with sway animation applied to the circles.
+        @param g the Graphics2D object used for drawing the plants
+    **/
     @Override
     public void draw(Graphics2D g) {
         for (DrawingObject line : lines) {
@@ -46,6 +56,9 @@ public class BackPlants extends DrawingObject {
         }
     }
 
+    /**
+        Updates the sway effect of the plants by adjusting the sway offset.
+    **/
     public void updateSway() {
         swayOffset = Math.sin(Math.toRadians(swayAngle)) * 2; 
         swayAngle += 3.5; 

@@ -2,12 +2,18 @@ import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.util.ArrayList;
 
+/**
+    The FrontPlants class represents a collection of fixed stems and swaying flowers.
+**/
 public class FrontPlants extends DrawingObject {
     private ArrayList<DrawingObject> lines;   // Fixed stems
     private ArrayList<Circle> circles;        // Swaying flowers
     private double swayOffset; // Small horizontal movement
     private double swayAngle; // Angle used for sin function
 
+    /**
+        Initializes the FrontPlants with fixed stem lines and swaying flower circles.
+    **/
     public FrontPlants() {
         lines = new ArrayList<>();
         circles = new ArrayList<>();
@@ -28,6 +34,10 @@ public class FrontPlants extends DrawingObject {
         swayAngle = 0;
     }
 
+    /**
+        Draws all the fixed stems and swaying flowers on the provided Graphics2D object.
+        @param g the Graphics2D object used for drawing the elements
+    **/
     @Override
     public void draw(Graphics2D g) {
         for (DrawingObject line : lines) {
@@ -36,7 +46,6 @@ public class FrontPlants extends DrawingObject {
 
         for (Circle circle : circles) {
             Graphics2D g2d = (Graphics2D) g.create();
-            
             AffineTransform at = new AffineTransform();
             at.translate(swayOffset, 0); 
             g2d.transform(at);
@@ -45,8 +54,12 @@ public class FrontPlants extends DrawingObject {
         }
     }
 
+    /**
+        Updates the sway of the flowers based on a sine function.
+        The flowers' horizontal movement is updated periodically.
+    **/
     public void updateSway() {
-        swayOffset = Math.sin(Math.toRadians(swayAngle)) * 2;
+        swayOffset = Math.sin(Math.toRadians(swayAngle)) * 2; 
         swayAngle += 3.5; 
         if (swayAngle >= 360) {
             swayAngle = 0; 

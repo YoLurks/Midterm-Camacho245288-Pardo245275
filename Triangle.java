@@ -9,6 +9,16 @@ public class Triangle extends DrawingObject {
     private Color color;
     private double rotation;
 
+    /**
+     * Constructor to initialize the triangle with position, size, color, and rotation.
+     * 
+     * @param x the x-coordinate of the triangle's position.
+     * @param y the y-coordinate of the triangle's position.
+     * @param w the width of the triangle.
+     * @param h the height of the triangle.
+     * @param color the color of the triangle.
+     * @param rotation the rotation of the triangle in degrees.
+     */
     public Triangle(double x, double y, double w, double h, Color color, double rotation) {
         this.x = x;
         this.y = y;
@@ -18,6 +28,11 @@ public class Triangle extends DrawingObject {
         this.rotation = rotation;
     }
 
+    /**
+     * Draws the rotated triangle on the given graphics context.
+     * 
+     * @param g the Graphics2D context to draw on.
+     */
     @Override
     public void draw(Graphics2D g) {
 
@@ -46,26 +61,51 @@ public class Triangle extends DrawingObject {
         g.fill(rotatedTriangle);
     }
 
-     @Override
+    /**
+     * Returns the y-coordinate of the triangle.
+     * 
+     * @return the y-coordinate of the triangle.
+     */
+    @Override
     public double getY() { 
         return y;
     }
     
+    /**
+     * Sets the y-coordinate of the triangle.
+     * 
+     * @param newY the new y-coordinate of the triangle.
+     */
     @Override
     public void setY(double newY) { 
         this.y = newY; 
     }
 
+    /**
+     * Returns the x-coordinate of the triangle.
+     * 
+     * @return the x-coordinate of the triangle.
+     */
     @Override
     public double getX(){
         return x;
     }
 
+    /**
+     * Sets the x-coordinate of the triangle.
+     * 
+     * @param newX the new x-coordinate of the triangle.
+     */
     @Override
     public void setX(double newX){
         this.x = newX;
     }
 
+    /**
+     * Changes the color of the triangle.
+     * 
+     * @param newColor the new color of the triangle.
+     */
     public void changeColor(Color newColor){
         this.color = newColor;
     }
